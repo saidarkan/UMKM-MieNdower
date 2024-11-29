@@ -12,7 +12,7 @@ class MenuProdukController extends Controller
      */
     public function index()
     {
-        //
+        /*ok*/
     }
 
     /**
