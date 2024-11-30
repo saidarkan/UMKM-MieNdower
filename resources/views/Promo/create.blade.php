@@ -39,7 +39,6 @@
         </form>
     </div>
 
-    
     <script>
         ClassicEditor
             .create(document.querySelector('#deskripsi_promo'))
