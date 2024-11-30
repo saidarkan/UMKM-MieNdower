@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto py-6">
         <h1 class="text-2xl font-bold mb-4">Tambah Promo</h1>
-        <form action="{{ route('promos.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('promo.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-4">
                 <label class="block text-sm font-medium">Nama Promo</label>
@@ -47,3 +47,5 @@
             });
     </script>
 </x-app-layout>
+
+

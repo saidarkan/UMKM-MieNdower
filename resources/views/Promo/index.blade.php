@@ -18,31 +18,31 @@
             Tambah Promo
         </a>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            @foreach ($promo as $promo)
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="{{ Storage::url($promo->gambar_promo) }}" class="w-full h-48 object-cover" alt="{{ $promo->nama_promo }}" />
-                    <div class="p-4">
-                        <h2 class="text-lg font-bold">{{ $promo->nama_promo }}</h2>
-                        <p class="text-gray-600 mt-2">{!! Str::limit($promo->deskripsi_promo, 100) !!}</p>
-                        <p class="text-gray-500 mt-2">Tanggal Promo: {{ \Carbon\Carbon::parse($promo->tanggal_promo)->format('d M Y') }}</p>
-                        <div class="mt-4">
-                            <a href="{{ route('promo.edit', $promo->id) }}" class="text-blue-500 hover:underline">Edit</a>
+        @foreach ($promo as $item)
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="{{ Storage::url($item->gambar_promo) }}" class="w-full h-48 object-cover" alt="{{ $item->nama_promo }}" />
+            <div class="p-4">
+                <h2 class="text-lg font-bold">{{ $item->nama_promo }}</h2>
+                <p class="text-gray-600 mt-2">{!! Str::limit($item->deskripsi_promo, 100) !!}</p>
+                <p class="text-gray-500 mt-2">Tanggal Promo: {{ \Carbon\Carbon::parse($item->tanggal_promo)->format('d M Y') }}</p>
+                <div class="mt-4">
+                    <a href="{{ route('promo.edit', $item->id) }}" class="text-blue-500 hover:underline">Edit</a>
 
-                            <form action="{{ route('promo.destroy', $promo->id) }}" method="POST" class="inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus promo ini?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="text-red-500 hover:underline ml-2">Hapus</button>
-                            </form>
-                        </div>
-                    </div>
+                    <form action="{{ route('promo.destroy', $item->id) }}" method="POST" class="inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus promo ini?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-red-500 hover:underline ml-2">Hapus</button>
+                    </form>
                 </div>
-            @endforeach
+            </div>
         </div>
+    @endforeach
+
 
         <!-- Pagination links -->
         <div class="mt-6">
             {{ $promo->links() }}
         </div>
+
     </div>
 </x-app-layout>

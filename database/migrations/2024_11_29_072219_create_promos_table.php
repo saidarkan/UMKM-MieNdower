@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('promo', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_promo');
+            $table->string('nama_promo'); 
             $table->text('deskripsi_promo');
             $table->string('gambar_promo');
             $table->date('tanggal_promo');
