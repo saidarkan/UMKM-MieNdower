@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Promo;
 use Illuminate\Http\Request;
 
+
 class PromoController extends Controller
 {
 
@@ -66,7 +67,7 @@ class PromoController extends Controller
             'gambar_promo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'tanggal_promo' => 'required|date',
         ]);
- 
+
         if ($request->hasFile('gambar_promo')) {
             $imagePath = $request->file('gambar_promo')->store('promo', 'public');
             $promo->gambar_promo = $imagePath;

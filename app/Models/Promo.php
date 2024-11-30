@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -21,6 +21,7 @@ class Promo extends Model
         'tanggal_promo',
     ];
 
+    
     // Jika menggunakan atribut gambar, Anda bisa menggunakan accessor atau mutator untuk penanganan gambar
     public function getGambarPromoAttribute($value)
     {

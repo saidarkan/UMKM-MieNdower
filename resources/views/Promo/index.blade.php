@@ -17,7 +17,6 @@
         <a href="{{ route('promo.create') }}" class="inline-block bg-blue-500 text-white px-4 py-2 rounded mb-4">
             Tambah Promo
         </a>
-
         @foreach ($promo as $item)
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
             <img src="{{ Storage::url($item->gambar_promo) }}" class="w-full h-48 object-cover" alt="{{ $item->nama_promo }}" />
