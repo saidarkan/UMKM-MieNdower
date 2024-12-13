@@ -13,6 +13,7 @@ class Promo extends Model
         'deskripsi_promo',
         'gambar_promo',
         'tanggal_promo',
+        'tanggal_berakhir',
     ];
 
     protected $dates = [
@@ -20,8 +21,6 @@ class Promo extends Model
     ];
 
 
-    public function getGambarPromoAttribute($value)
-    {
-        return asset('storage/' . $value);
-    }
+
+    protected $primaryKey = 'id';
 }
