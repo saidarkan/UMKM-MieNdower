@@ -3,6 +3,13 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\QnaController;
+use App\Http\Controllers\HomepageController;
+
+// Route Homepage
+Route::resource('homepage', HomepageController::class);
+
+// Contoh tambahan untuk halaman utama
+Route::get('/homepage', [HomepageController::class, 'index'])->name('homepage.index');
 
 Route::resource('qna', QnaController::class);
 
