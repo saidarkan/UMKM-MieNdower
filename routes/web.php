@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,6 +20,10 @@ Route::middleware('auth')->group(function () {
 
     // ArtikelController hanya untuk user login
     Route::resource('artikel', ArtikelController::class);
+    Route::resource('about', AboutController::class);
 });
+
+
+
 
 require __DIR__.'/auth.php';
