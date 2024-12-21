@@ -84,7 +84,7 @@
     </div>
     <div class="flex justify-center mt-10">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4053976662223!2d101.424330169532!3d0.5689810410031069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab67b17cf02d%3A0x10dd667768acfc63!2sIndomaret%20Umbansari%20128!5e0!3m2!1sid!2sid!4v1732897098746!5m2!1sid!2sid"
+            src="{{ $locations->first()->link_lokasi }}"
             width="1500" height="300" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
