@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+<<<<<<< HEAD
+=======
+
+<!-- Tambahkan ini di dalam <head> -->
+<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+
+>>>>>>> origin/Ridho
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -31,8 +38,11 @@
             <main>
                 {{ $slot }}
             </main>
+<<<<<<< HEAD
 
             @include('layouts.footer', ['contacts' => $contacts])
+=======
+>>>>>>> origin/Ridho
         </div>
     </body>
 </html>

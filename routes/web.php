@@ -1,18 +1,31 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LocationController;
 
 use App\Models\Menu;
+=======
+use App\Http\Controllers\PromoController;
+
+Route::get('/promo', function () {
+    return view('promo');
+});
+
+Route::resource('promo', PromoController::class);
+
+>>>>>>> origin/Ridho
 
 Route::get('/', function () {
     $menus = Menu::all(); // Mengambil semua data menu dari database
     return view('welcome', compact('menus')); // Mengirim data menus ke view
 });
 
+<<<<<<< HEAD
 
 Route::resource('menus', MenuController::class);
 
@@ -31,6 +44,11 @@ Route::get('/dashboard', function () {
 Route::get('/faq', function () {
     return view('faq.index');
 });
+=======
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+>>>>>>> origin/Ridho
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,6 +56,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+<<<<<<< HEAD
 
+=======
+Route::resource('promo', PromoController::class);
+>>>>>>> origin/Ridho
 
 require __DIR__.'/auth.php';
