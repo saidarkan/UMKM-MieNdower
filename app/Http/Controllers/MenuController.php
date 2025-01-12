@@ -11,17 +11,16 @@ class MenuController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
-{
-    // Ambil kategori dari parameter query, default 'mie' jika tidak ada
-    $category = $request->get('category', 'mie'); // Default kategori 'mie'
+    public function index()
+    {
+        // Ambil semua menu
+        $menus = Menu::all();
 
-    // Ambil data menu berdasarkan jenis_menu yang sesuai
-    $menus = Menu::where('jenis_menu', $category)->get();
+        // Kirim data ke view welcome
+        return view('menu.index', compact('menus'));
+    }
 
-    // Kirim data menu dan kategori ke view
-    return view('menu.index', compact('menus', 'category'));
-}
+
 
 
     /**

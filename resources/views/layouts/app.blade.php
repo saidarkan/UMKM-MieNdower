@@ -32,7 +32,7 @@
                 {{ $slot }}
             </main>
 
-            @include('layouts.footer')
+            @include('layouts.footer', ['contacts' => $contacts])
         </div>
     </body>
 </html>
