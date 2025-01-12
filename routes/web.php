@@ -6,9 +6,13 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LocationController;
 
+use App\Models\Menu;
+
 Route::get('/', function () {
-    return view('welcome');
+    $menus = Menu::all(); // Mengambil semua data menu dari database
+    return view('welcome', compact('menus')); // Mengirim data menus ke view
 });
+
 
 Route::resource('menus', MenuController::class);
 
