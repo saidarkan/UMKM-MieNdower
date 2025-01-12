@@ -1,21 +1,20 @@
-<nav class="bg-white fixed top-0 left-0 w-full z-10 shadow" x-data="{ isOpen: false }">
+<nav class="bg-transparent fixed top-0 left-0 w-full z-10 transition-all duration-300 ease-in-out" id="navbar" x-data="{ isOpen: false }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <!-- Logo -->
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <img class="h-12 w-12" src="https://png.pngtree.com/png-vector/20220911/ourmid/pngtree-hot-noodle-logo-png-image_6161663.png" alt="Logo">
-                </div>
-                <!-- Menu Links -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-6">
-                        <x-nav-link href="/" :active="request()->is('/')">HOME</x-nav-link>
-                        <x-nav-link href="/menus" :active="request()->is('menus')">MENU</x-nav-link>
-                        <x-nav-link href="/promo" :active="request()->is('promo')">PROMO</x-nav-link>
-                        <x-nav-link href="/#about" :active="request()->is('home')">ABOUT</x-nav-link>
-                        <x-nav-link href="/#contact" :active="request()->is('home')">LOCATION</x-nav-link>
-                        <x-nav-link href="/faq" :active="request()->is('faq')">FAQ</x-nav-link>
-                    </div>
+            <div class="flex-shrink-0">
+                <img class="h-12 w-12" src="https://png.pngtree.com/png-vector/20220911/ourmid/pngtree-hot-noodle-logo-png-image_6161663.png" alt="Logo">
+            </div>
+
+            <!-- Menu Links -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-6">
+                    <x-nav-link href="/" :active="request()->is('/')">HOME</x-nav-link>
+                    <x-nav-link href="/menus" :active="request()->is('menus')">MENU</x-nav-link>
+                    <x-nav-link href="/promo" :active="request()->is('promo')">PROMO</x-nav-link>
+                    <x-nav-link href="/#about" :active="request()->is('home')">ABOUT</x-nav-link>
+                    <x-nav-link href="/#contact" :active="request()->is('home')">LOCATION</x-nav-link>
+                    <x-nav-link href="/faq" :active="request()->is('faq')">FAQ</x-nav-link>
                 </div>
             </div>
 
@@ -27,14 +26,10 @@
                             Dashboard
                         </a>
                     @else
-                        <a href="{{ route('login') }}" class="text-gray-700 hover:bg-gray-100 hover:text-red-500 px-4 py-2 rounded-md text-sm font-medium">
+                        <a href="{{ route('login') }}" class="bg-red-500 text-white hover:bg-red-600 px-4 py-2 rounded-md text-sm font-medium">
                             Log in
                         </a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="bg-red-500 text-white hover:bg-red-600 px-4 py-2 rounded-md text-sm font-medium">
-                                Register
-                            </a>
-                        @endif
+                        
                     @endauth
                 @endif
             </div>
@@ -63,4 +58,46 @@
             <x-nav-link href="/contact" :active="request()->is('contact')">CONTACT</x-nav-link>
         </div>
     </div>
+
 </nav>
+
+<script>
+    // Script untuk navbar transparan saat di-scroll
+    window.onscroll = function () {
+        var navbar = document.getElementById("navbar");
+        var links = document.querySelectorAll("#navbar .nav-link");
+
+        // Menambahkan pengecekan jika halaman sudah di-scroll
+        if (window.scrollY > 0) {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add("bg-white", "shadow-md");  // Menambahkan shadow agar navbar terlihat jelas
+            links.forEach(function(link) {
+                link.classList.remove("text-white");  // Mengubah warna menjadi normal setelah scroll
+                link.classList.add("text-gray-700");  // Ganti warna menjadi abu-abu setelah scroll
+            });
+        } else {
+            navbar.classList.remove("bg-white", "shadow-md");
+            navbar.classList.add("bg-transparent");
+            links.forEach(function(link) {
+                link.classList.add("text-white");  // Menambahkan warna putih pada navbar transparan
+                link.classList.remove("text-gray-700");
+            });
+        }
+    };
+
+    // Pastikan navbar tetap transparan dan teks putih saat halaman dimuat
+    document.addEventListener("DOMContentLoaded", function() {
+        var navbar = document.getElementById("navbar");
+        var links = document.querySelectorAll("#navbar .nav-link");
+
+        // Cek apakah halaman home aktif
+        if (window.location.pathname === '/') {
+            navbar.classList.add("bg-transparent");
+            links.forEach(function(link) {
+                link.classList.add("text-white");  // Teks putih saat di halaman home
+                link.classList.remove("text-gray-700");
+            });
+        }
+    });
+</script>
+
