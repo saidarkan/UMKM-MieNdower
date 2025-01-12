@@ -90,6 +90,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+<<<<<<< HEAD
                     <x-nav-link :href="route('pesansaran.index')" :active="request()->routeIs('pesansaran')">
                         {{ __('Pesan Saran') }}
                     </x-nav-link>
@@ -100,6 +101,14 @@
                         {{ __('Artikel') }}
                     </x-nav-link>
                     @endif
+=======
+                    <x-nav-link :href="route('artikel.index')" :active="request()->routeIs('artikel')">
+                        {{ __('Artikel') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('about.index')" :active="request()->routeIs('about')">
+                        {{ __('About') }}
+                    </x-nav-link>
+>>>>>>> origin/Rakha
                 </div>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
