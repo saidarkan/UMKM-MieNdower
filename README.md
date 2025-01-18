@@ -5,21 +5,19 @@
 
 ## 1.1 Tujuan
 
-Dokumen Software Requirement Specification (SRS) merupakan dokumen spesifikasi perangkat lunak untuk membangun “Sistem Informasi Parenting”. Dokumen ini dibangun untuk memudahkan Dinas Perlindungan Anak memberikan informasi dan edukasi terkait Ilmu Parenting kepada calon orang tua dan para orang tua. Sehingga dokumen ini dapat dijadikan acuan teknis untuk membangun perangkat lunak “SISTEM INFORMASI PARENTING”.
+Website UMKM Mie Ndower dirancang untuk memudahkan pengelola UMKM Mie  Ndower dalam memperkenalkan produk, memberikan informasi terkait varian menu, harga, promosi, serta kemudahan pemesanan kepada pelanggan. Website ini bertujuan menjadi sarana yang efektif dalam mendukung pemasaran dan pelayanan pelanggan secara online, sehingga dapat meningkatkan visibilitas dan penjualan produk Mie Ndower.
 
 
 ## 1.2 Lingkup
-Sistem Informasi Parenting merupakan aplikasi yang kami bangun untuk mempermudah Dinas Perlindungan Anak dalam memberikan infromasi dan edukasi kepada para calon orang tua dan orang tua seputar Ilmu Parenting seperti perkembangan anak, kesehatan anak, pendidikan anak, kesejahteraan mental anak, dan lain-lainnya.
+Website UMKM Mie Ndower merupakan website yang kami bangun untuk mempermudah pengelola UMKM Mie Ndower dalam memberikan informasi kepada pelanggan seputar produk unggulan, varian menu, harga, promosi. Website ini juga dirancang untuk mendukung pemasaran dan meningkatkan interaksi dengan pelanggan, sehingga dapat memperluas jangkauan dan meningkatkan penjualan.
 
 ## 1.3 Akronim, singkatan, definisi
 | Istilah | Definisi |
 | ------ | ------ |
-|   SRS     |    Software Requirement Specification    |
+|   Use Case     |    situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda    |
 |    Login    | Digunakan untuk mengakses aplikasi       |
-|   Software Requirement Specification     | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna       |
-|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
-|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
-|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
+|    Flow Chart    | uraian dari setiap elemen dalam diagram alur (flowchart), yang menggambarkan proses langkah demi langkah dari suatu sistem atau aktivitas.       |
+|    ERD    | representasi visual dari hubungan antara entitas dalam sebuah sistem.       |
 
 ## 1.4 Referensi
 Referensi yang digunakan dalam pengembangan perangkat lunak ini adalah :
@@ -29,7 +27,7 @@ Referensi yang digunakan dalam pengembangan perangkat lunak ini adalah :
 
 
 ## 1.5 Overview
-Bab selanjutnya yaitu menjelaskan sistem yang di terapkan pada aplikasi. Menjelaskan gambaran umum dari aplikasi, sistem interface aplikasi dan alur sistemnya. Bab terakhir menjelaskan tentang setiap fungsi yang digunakan secara teknisnya. Pada bab 2 dan 3 merupakan deskripsi dari aplikasi yang akan diterapkan pada aplikasi yang dibuat.
+Bab selanjutnya yaitu menjelaskan sistem yang diterapkan pada website. Menjelaskan gambaran umum dari website, sistem interface website dan alur sistemnya. Bab terakhir menjelaskan tentang setiap fungsi yang digunakan secara teknisnya. Pada bab 2 dan 3 merupakan deskripsi dari website yang akan diterapkan pada website yang dibuat.
 
 
 ## BAB II GAMBARAN UMUM
@@ -127,6 +125,7 @@ tidak ada
 
 tidak ada
 
+
 ## 2.2 Spesifikasi kebutuhan fungsional
 [Gambar/Fungsional.png](https://github.com/saidarkan/UMKM-MieNdower/blob/aff244c1bc847ad9ef2055b7afe60219494df7ad/Gambar/Fungsional.png)
 
@@ -148,109 +147,127 @@ Deskripsi Langkah-Langkah
 
 Xref: Bagian 3.2.1, Login Admin
 
-**2.2.2 Admin Input Artikel Parenting**
+**2.2.2 Admin Management Menu**
 
-Use Case: Input Artikel Parenting
+Use Case: INput data Menu
 
 Diagram:
 
 ![alt text](Image/2.2.2.png?raw=true)
 
 Deskripsi Singkat
-Admin menginputkan kategori parenting lalu menambahkan judul dan deskripsi sesuain kategori.
+Admin mengelola menu yang terdiri dari Judul Menu, Deskripsi Menu, Gambar Menu, dan Harga Menu.
 
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan input artikel.
-2. Admin Dapat melihat,menambahkan, dan mengupload artikel.
-3. Sistem akan menyimpan ke database.
-4. Jika sudah disimpan sistem akan menampilkan peringatan.
+1. Admin bertugas mengelola menu di sistem.
+2. Admin mengakses fitur Management Menu untuk melakukan pengelolaan data terkait menu.
+3. Admin dapat menambahkan atau memperbarui Judul Menu, Deskripsi Menu, Gambar Menu, dan Harga Menu
+
 
 Xref: Bagian 3.2.2, Input data Artikel Parenting
 
-**2.2.3 Admin Input Dokumentasi kegiatan**
+**2.2.3 Admin Management Promo**
 
-Use Case: Input Dokumentasi kegiatan
+Use Case: Input data Promo
 
 Diagram:
 ![alt text](Image/2.2.3.png?raw=true)
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman input dokumentasi kegiatan dan Admin menginputkan dokumentasi kegiatan.
+Admin mengelola promo yang terdiri dari Judul Promo, Deskripsi Promo, Tanggal Promo, dan Tanggal berakhir promo.
 
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan publikasi kegiatan.
-2. Admin dapat melihat,menambahkan, dan mengupload kegiatan.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Admin bertugas mengelola promo di sistem.
+2. Admin mengakses fitur Management Promo untuk melakukan pengelolaan data terkait Promo.
+3. Admin dapat menambahkan atau memperbarui Judul Promo, Deskripsi Promo, Tanggal Promo, dan Tanggal berakhir promo
+
 
 Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
 
-**2.2.4 Admin Input data tentang B3AM**
+**2.2.4 Admin FAQ**
 
-Use Case: Input data tentang B3AM
+Use Case: Input data FAQ
 
 Diagram:![alt text](revisi/revisi2.jpg?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data tentang B3AM dan Admin mengInput data tentang B3AM.
+Admin mengelola FAQ yang terdiri dari Pertanyaan dan Jawaban.
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data tentang B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data tentang B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Admin bertugas mengelola FAQ di sistem.
+2. Admin mengakses fitur FAQ untuk melakukan pengelolaan data terkait FAQ.
+3. Admin dapat menambahkan atau memperbarui Pertanyaan dan Jawaban
+
 
 Xref: Bagian 3.2.3,data tentang B3AM
 
-**2.2.5 Admin Input data contact B3AM**
+**2.2.5 Admin Management Artikel**
 
-Use Case: Input data contact B3AM
+Use Case: Input data Artikel
 
 Diagram:![alt text](revisi/revisi4.jpg?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data contact B3AM dan Admin mengInput data contact B3AM.
+Admin mengelola promo yang terdiri dari Judul, Kategori, Tanggal Artikel, Isi Artikel, Status, dan Gambar.
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data contact B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data contact B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Admin bertugas mengelola Artikel di sistem.
+2. Admin mengakses fitur Management Artikel untuk melakukan pengelolaan data terkait Artikel.
+3. Admin dapat menambahkan atau memperbarui Judul, Kategori, Tanggal Artikel, Isi Artikel, Status, dan Gambar.
+
 
 Xref: Bagian 3.2.3,data contact B3AM
 
-**2.2.6 Admin Input data team B3AM**
+**2.2.6 Admin Management Homepage**
 
-Use Case: Input data team B3AM
+Use Case: Input data Homepage
 
 Diagram:![alt text](revisi/revisi3.jpg?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Admin dapat menambahkan atau memperbarui Judul, terdiri dari Judul 1, Judul 2, dan Pembuka dan juga Admin dapat menambahkan atau memperbarui Deskripsi Judul, Sub-Judul, dan Deskripsi Sub-Judul
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data team B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Admin bertugas mengelola Homepage di sistem.
+2. Admin mengakses fitur Management Homepage untuk melakukan pengelolaan data terkait Homepage.
+3. Admin dapat menambahkan atau memperbarui Judul, terdiri dari Judul 1, Judul 2, dan Pembuka 
+4. Admin dapat menambahkan atau memperbarui Deskripsi Judul, Sub-Judul, dan Deskripsi Sub-Judul
+
 
 Xref: Bagian 3.2.3,data team B3AM
 
 
-**2.2.7 pengunjung Mengunjungi website**
+**2.2.7 Admin Management Location**
 
-Use Case: Mengunjungi website
+Use Case: Input data Location
 
 Diagram:
 ![alt text](Image/pengunjungMengunjungiWeb.png?raw=true)
 
 Deskripsi Singkat 
-pengunjung mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia, pengunjung juga dapat memberikan komentar pada konten parenting yang tersedia 
-
+Admin mengelola Location yang terdiri dari Nama Lokasi dan Link Lokasi.
 Deskripsi Langkah-Langkah
-1. Sistem akan menampilkan halaman-halaman konten.
-2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
-3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
+1. Admin bertugas mengelola Location di sistem.
+2. Admin mengakses fitur Management Location untuk melakukan pengelolaan data terkait Location.
+3. Admin dapat menambahkan atau memperbarui Nama Lokasi dan Link Lokasi.
+
+Xref: Bagian 3.2.7, Login pengunjung
+
+**2.2.8 Customer Mengunjungi Website**
+
+Use Case: Customer melihat website
+
+Diagram:
+![alt text](Image/pengunjungMengunjungiWeb.png?raw=true)
+
+Deskripsi Singkat 
+Customer hanya dapat melihat website dan hanya bisa menambahkan review
+Deskripsi Langkah-Langkah
+1. Customer mengunjungi website 
+2. Customer hanya dapat melihat website tidak dapat mengelola website
+3. Customer dapat melihat About, Menu, Promo, FAQ, Artikel, Locations, Contact.
+4. Customer dapat menambahkan review menu dan tersimpan pada data 
+
 
 Xref: Bagian 3.2.7, Login pengunjung
 
@@ -260,10 +277,10 @@ Xref: Bagian 3.2.7, Login pengunjung
 | no | deskripsi |
 | ------ | ------ |
 |     1   |   Semua interface dan fungsi menggunakan Bahasa Indonesia     |
-|     2   |   Perangkat Lunak dapat dipakai di semua platofrm OS ( Admin, pengunjung )     |
+|     2   |   Perangkat Lunak dapat dipakai di semua platofrm OS ( Admin, Customer )     |
 
 ## 2.4 Karakteristik Pengguna
-Karakteristik pengguna dari perangkat lunak ini adalah pengguna langsung berinteraksi dengan sistem dan dihubungkan dengan hak akses atau level autentikasi.
+Karakteristik pengguna dari website ini adalah pengguna hanya dapat melihat dan hanya dapat menginputkan review pada sistem website dan dihubungkan dengan hak akses atau level autentikasi.
 
 ## 2.5 Batasan-batasan
 tidak ada
