@@ -5,8 +5,7 @@
 
 ## 1.1 Tujuan
 
-Website UMKM Mie Ndower dirancang untuk memudahkan pengelola UMKM Mie  Ndower dalam memperkenalkan produk, memberikan informasi terkait varian menu, harga, promosi, serta kemudahan pemesanan kepada pelanggan. Website ini bertujuan menjadi sarana yang efektif dalam mendukung pemasaran dan pelayanan pelanggan secara online, sehingga dapat meningkatkan visibilitas dan penjualan produk Mie Ndower.
-
+Dokumen Software Requirement Specification (SRS) merupakan dokumen spesifikasi perangkat lunak untuk membangun “Website Profile Mie NDower”.Website UMKM Mie Ndower dirancang untuk memudahkan pengelola UMKM Mie  Ndower dalam memperkenalkan produk, memberikan informasi terkait varian menu, harga, promosi, serta kemudahan pemesanan kepada pelanggan. Website ini bertujuan menjadi sarana yang efektif dalam mendukung pemasaran dan pelayanan pelanggan secara online, sehingga dapat meningkatkan visibilitas dan penjualan produk Mie Ndower.
 
 ## 1.2 Lingkup
 Website UMKM Mie Ndower merupakan website yang kami bangun untuk mempermudah pengelola UMKM Mie Ndower dalam memberikan informasi kepada pelanggan seputar produk unggulan, varian menu, harga, promosi. Website ini juga dirancang untuk mendukung pemasaran dan meningkatkan interaksi dengan pelanggan, sehingga dapat memperluas jangkauan dan meningkatkan penjualan.
@@ -16,14 +15,15 @@ Website UMKM Mie Ndower merupakan website yang kami bangun untuk mempermudah pen
 | ------ | ------ |
 |   Use Case     |    situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda    |
 |    Login    | Digunakan untuk mengakses aplikasi       |
-|    Flow Chart    | uraian dari setiap elemen dalam diagram alur (flowchart), yang menggambarkan proses langkah demi langkah dari suatu sistem atau aktivitas.       |
+|    SRS    | Software Requirement Specification       |
+|    Software Requirement Specification    | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna      |
+|    ERD    | Entity Relationship Diagram.       |
 |    ERD    | representasi visual dari hubungan antara entitas dalam sebuah sistem.       |
 
 ## 1.4 Referensi
 Referensi yang digunakan dalam pengembangan perangkat lunak ini adalah :
 
--https://schoolofparenting.id/
-
+-https://mieayammahmud.com/
 
 
 ## 1.5 Overview
@@ -163,7 +163,7 @@ Deskripsi Langkah- langkah:
 3. Admin dapat menambahkan atau memperbarui Judul Menu, Deskripsi Menu, Gambar Menu, dan Harga Menu
 
 
-Xref: Bagian 3.2.2, Input data Artikel Parenting
+Xref: Bagian 3.2.2, Input data Menu
 
 **2.2.3 Admin Management Promo**
 
@@ -181,7 +181,7 @@ Deskripsi Langkah- langkah:
 3. Admin dapat menambahkan atau memperbarui Judul Promo, Deskripsi Promo, Tanggal Promo, dan Tanggal berakhir promo
 
 
-Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
+Xref: Bagian 3.2.3, Input data Promo
 
 **2.2.4 Admin FAQ**
 
@@ -198,7 +198,7 @@ Deskripsi Langkah- langkah:
 3. Admin dapat menambahkan atau memperbarui Pertanyaan dan Jawaban
 
 
-Xref: Bagian 3.2.3,data tentang B3AM
+Xref: Bagian 3.2.4,Input data FAQ
 
 **2.2.5 Admin Management Artikel**
 
@@ -215,7 +215,7 @@ Deskripsi Langkah- langkah:
 3. Admin dapat menambahkan atau memperbarui Judul, Kategori, Tanggal Artikel, Isi Artikel, Status, dan Gambar.
 
 
-Xref: Bagian 3.2.3,data contact B3AM
+Xref: Bagian 3.2.5,Input data Artikel
 
 **2.2.6 Admin Management Homepage**
 
@@ -233,10 +233,44 @@ Deskripsi Langkah- langkah:
 4. Admin dapat menambahkan atau memperbarui Deskripsi Judul, Sub-Judul, dan Deskripsi Sub-Judul
 
 
-Xref: Bagian 3.2.3,data team B3AM
+Xref: Bagian 3.2.6,Input data Homepage
+
+**2.2.7 Admin Management About**
+
+Use Case: Input data About
+
+Diagram:![alt text](Gambar/AdminHomepage.png?raw=true)
 
 
-**2.2.7 Admin Management Location**
+Deskripsi Singkat
+Admin dapat menambahkan atau memperbarui Judul, Deskripsi, dan Gambar
+Deskripsi Langkah- langkah:
+1. Admin bertugas mengelola About di sistem.
+2. Admin mengakses fitur Management About untuk melakukan pengelolaan data terkait About.
+3. Admin dapat menambahkan atau memperbarui Judul, Deskripsi, dan Gambar
+
+
+Xref: Bagian 3.2.7,Input data About
+
+**2.2.8 Admin Management Contact**
+
+Use Case: Input data Contact
+
+Diagram:![alt text](Gambar/AdminHomepage.png?raw=true)
+
+
+Deskripsi Singkat
+Admin dapat menambahkan atau memperbarui Nama Medsos, Link Medsos, Ikon Medsos
+Deskripsi Langkah- langkah:
+1. Admin bertugas mengelola Contact di sistem.
+2. Admin mengakses fitur Management Contact untuk melakukan pengelolaan data terkait Contact.
+3. Admin dapat menambahkan atau memperbarui Nama Medsos, Link Medsos, Ikon Medsos 
+
+
+Xref: Bagian 3.2.8,Input data Contact
+
+
+**2.2.9 Admin Management Location**
 
 Use Case: Input data Location
 
@@ -250,9 +284,9 @@ Deskripsi Langkah-Langkah
 2. Admin mengakses fitur Management Location untuk melakukan pengelolaan data terkait Location.
 3. Admin dapat menambahkan atau memperbarui Nama Lokasi dan Link Lokasi.
 
-Xref: Bagian 3.2.7, Login pengunjung
+Xref: Bagian 3.2.9, Login pengunjung
 
-**2.2.8 Customer Mengunjungi Website**
+**2.2.10 Customer Mengunjungi Website**
 
 Use Case: Customer melihat website
 
@@ -268,7 +302,7 @@ Deskripsi Langkah-Langkah
 4. Customer dapat menambahkan review menu dan tersimpan pada data 
 
 
-Xref: Bagian 3.2.7, Login pengunjung
+Xref: Bagian 3.2.10, Login pengunjung
 
 ## 2.3 Spesifikasi kebutuhan non-fungsional
 - tabel kebutuhan non-fungsional
@@ -402,7 +436,22 @@ tidak ada
 | Post Condition     |  Tidak Ada .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.8 Input data Location**
+**3.2.8 Input data Contact**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.4 Admin Input data tentang Contact                     |
+| Trigger            | admin dapat menginputkan data tentang Contact |
+| Precondition       | Admin menginputkan data tentang Homepage ke Contact |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang Contact. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang Contact.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Tidak Ada .        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.9 Input data Location**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
@@ -417,7 +466,7 @@ tidak ada
 | Post Condition     |  Tidak Ada .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.9 Mengunjungi website**
+**3.2.10 Mengunjungi website**
 
 | Nama Fungsi        |    pengunjung  Mengunjungi website             |
 | ------------------- | ---------------------------------- |
