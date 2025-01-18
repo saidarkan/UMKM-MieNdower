@@ -283,14 +283,14 @@ Salah satu cara mengakses website ini yaitu dengan registrasi, setelah registras
 | Nama Fungsi         | Login                                  |
 | ------------------- | -------------------------------------- |
 | Xref                | Bagian 2.2.1 Login               |
-| Trigger             | Admin Membuka Website Sistem Informasi Parenting |
+| Trigger             | Admin Membuka Website Profile Mie Ndower |
 | Precondition        | Halaman login                          |
 | Basic Path          | 1. Admin melakukan login dengan username dan password.
 |        |         2. Sistem melakukan validasi login. |
-|        | 3. Bila sukses, sistem akan mengarahkan ke home admin.  |
+|        | 3. Bila sukses, sistem akan mengarahkan ke dashboard admin.  |
 |        | 4. Bila gagal, sistem akan menampilkan peringatan. |
 |     Alternative       |                   Tidak Ada                   |
-| Post Condition     |                  admin dapat login dan mengakses webiste sistem informasi parenting                   |
+| Post Condition     |                  admin dapat login dan mengakses webiste profile mie ndower                   |
 |         Exception Push          |                  Username dan password salah                   |
 
 **3.2.2 Admin Input Informasi Artikel Parenting**
