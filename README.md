@@ -91,7 +91,7 @@ Sistem Informasi Parenting memiliki 2 pengunjung yaitu admin dan pengunjung. Adm
 
 
 **2.1.3 Antarmuka perangkat keras**
-![alt text](Image/perangkatKeras.png?raw=true)
+![alt text](Gambar/Data.png?raw=true)
 Antarmuka perangkat keras yang digunakan untuk mengoperasikan Perangkat Lunak Sistem Parenting antara lain :
 
 PC / Laptop Untuk menjalankan Aplikasi ini.
