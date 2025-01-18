@@ -128,7 +128,8 @@ tidak ada
 tidak ada
 
 ## 2.2 Spesifikasi kebutuhan fungsional
-![alt text](Image/2.2.png?raw=true)
+Gambar/Fungsional.png
+
 **2.2.1 Admin Login**
 
 Use Case: Login
