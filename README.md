@@ -293,7 +293,7 @@ Xref: Bagian 3.2.9, Input data Location
 Use Case: Input data Reviews
 
 Diagram:
-![alt text](Gambar/AdminLocation.png?raw=true)
+![alt text](Gambar/AdminReview.png?raw=true)
 
 Deskripsi Singkat 
 Admin mengelola Reviews yang terdiri dari Rating, Comment, Jawaban, Nama.
@@ -302,7 +302,7 @@ Deskripsi Langkah-Langkah
 2. Admin mengakses fitur Management Location untuk melakukan pengelolaan data terkait Reviews.
 3. Admin dapat menambahkan atau memperbarui Jawaban.
 
-Xref: Bagian 3.2.9, Input data Reviews
+Xref: Bagian 3.2.10, Input data Reviews
 
 **2.2.11 Customer Mengunjungi Website**
 
