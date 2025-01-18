@@ -505,16 +505,7 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |status|varchar|Berisi status pada artikel sistem|
 |tanggal|varchar|Berisi tanggal pada artikel sistem|
 
-**Tabel Kegiatan**
-|Data Item|Tipe Data|Deskripsi|
-|--|--|--|
-|id_kegiatan|int|Auto-increment dari Id_kegiatan|
-|gambar|varchar|Berisi gambar didalam kegiatan sistem|
-|deskripsi|text|Berisi deskripsi kegiatan sistem|
-|judul|varchar|Berisi judul pada kegiatan sistem|
-|tanggal|varchar|Berisi tanggal pada kegiatan sistem|
-
-**Tabel about**
+**Tabel About**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
 |id_about|int|Auto-increment dari id_about|
@@ -522,14 +513,31 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |deskripsi|text|Berisi deskripsi about sistem|
 |judul|varchar|Berisi judul pada about sistem|
 
-
-**Tabel contact**
+**Tabel Contact**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
 |id_contact|int|Auto-increment dari id_contact|
 |nama|varchar|Berisi nama pada contact sistem|
 |icon|text|Berisi icon contact sistem|
 |link|text|Berisi link contact sistem|
+
+**Tabel Lokasi**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_lokasi|int|Auto-increment dari id_lokasi|
+|nama|varchar|Berisi nama pada lokasi sistem|
+|link|text|Berisi link lokasi sistem|
+
+**Tabel Homepage**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_homepage|int|Auto-increment dari id_homepage|
+|pembuka|varchar|Berisi pembuka pada kegiatan sistem|
+|judul1|varchar|Berisi judul1 pada kegiatan sistem|
+|judul2|varchar|Berisi judul2 pada kegiatan sistem|
+|deskripsi_judul|text|Berisi deskripsi_judul kegiatan sistem|
+|subjudul|text|Berisi subjudul kegiatan sistem|
+|deskripsi_subjudul|text|Berisi deskripsi_subjudul kegiatan sistem|
 
 **Tabel Promo**
 |Data Item|Tipe Data|Deskripsi|
