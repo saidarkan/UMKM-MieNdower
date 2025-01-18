@@ -493,7 +493,6 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |Id_Admin|int|Auto-increment dari Id_Admin|
 |username|varchar|Berisi username admin untuk mengakses sistem|
 |Password|varchar|Berisi password admin untuk mengakses sistem|
-|level|varchar|untuk membedakan level saat login antara admin dan pengunjung|
 
 **Tabel Artikel**
 |Data Item|Tipe Data|Deskripsi|
@@ -503,6 +502,8 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |deskripsi|text|Berisi deskripsi artikel sistem|
 |judul|varchar|Berisi judul pada artikel sistem|
 |kategori|varchar|Berisi kategori pada artikel sistem|
+|status|varchar|Berisi status pada artikel sistem|
+|tanggal|varchar|Berisi tanggal pada artikel sistem|
 
 **Tabel Kegiatan**
 |Data Item|Tipe Data|Deskripsi|
@@ -519,13 +520,27 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |id_about|int|Auto-increment dari id_about|
 |gambar|varchar|Berisi gambar didalam about sistem|
 |deskripsi|text|Berisi deskripsi about sistem|
+|judul|varchar|Berisi judul pada about sistem|
+
 
 **Tabel contact**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
 |id_contact|int|Auto-increment dari id_contact|
-|judul|varchar|Berisi judul pada contact sistem|
-|isi|text|Berisi isi contact sistem|
+|nama|varchar|Berisi nama pada contact sistem|
+|icon|text|Berisi icon contact sistem|
+|link|text|Berisi link contact sistem|
+
+**Tabel Promo**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_promo|int|Auto-increment dari id_promo|
+|judul|varchar|Berisi judul pada kegiatan sistem|
+|deskripsi|text|Berisi deskripsi kegiatan sistem|
+|tanggal|varchar|Berisi tanggal pada kegiatan sistem|
+|jenis|text|Berisi jenis kegiatan sistem|
+|tanggal_berakhir|text|Berisi tanggal_berakhir kegiatan sistem|
+
 
 **Tabel team**
 |Data Item|Tipe Data|Deskripsi|
