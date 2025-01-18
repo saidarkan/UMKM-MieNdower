@@ -54,7 +54,7 @@ Berikut ini fungsi admin yaitu:
 - Input, Edit, Delete FAQ
 - Input, Edit, Delete About
 - Input, Edit, Delete Locations
-- Manage Reviews
+- Input, Edit, Delete Reviews
   
 ## 2.1 Perspektif produk
 Web Profile Mie Ndower adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengunjung. Pengolahan data dilakukan oleh admin pada website, sedangkan pengunjung hanya dapat melihat informasi yang telah disediakan pada website.
@@ -286,9 +286,25 @@ Deskripsi Langkah-Langkah
 2. Admin mengakses fitur Management Location untuk melakukan pengelolaan data terkait Location.
 3. Admin dapat menambahkan atau memperbarui Nama Lokasi dan Link Lokasi.
 
-Xref: Bagian 3.2.9, Login pengunjung
+Xref: Bagian 3.2.9, Input data Location
 
-**2.2.10 Customer Mengunjungi Website**
+**2.2.10 Admin Management Reviews**
+
+Use Case: Input data Reviews
+
+Diagram:
+![alt text](Gambar/AdminLocation.png?raw=true)
+
+Deskripsi Singkat 
+Admin mengelola Reviews yang terdiri dari Rating, Comment, Jawaban, Nama.
+Deskripsi Langkah-Langkah
+1. Admin bertugas mengelola Reviews di sistem.
+2. Admin mengakses fitur Management Location untuk melakukan pengelolaan data terkait Reviews.
+3. Admin dapat menambahkan atau memperbarui Jawaban.
+
+Xref: Bagian 3.2.9, Input data Reviews
+
+**2.2.11 Customer Mengunjungi Website**
 
 Use Case: Customer melihat website
 
@@ -304,7 +320,7 @@ Deskripsi Langkah-Langkah
 4. Customer dapat menambahkan review menu dan tersimpan pada data 
 
 
-Xref: Bagian 3.2.10, Login pengunjung
+Xref: Bagian 3.2.11, Login pengunjung
 
 ## 2.3 Spesifikasi kebutuhan non-fungsional
 - tabel kebutuhan non-fungsional
@@ -468,7 +484,22 @@ tidak ada
 | Post Condition     |  Tidak Ada .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.10 Mengunjungi website**
+**3.2.10 Input data Reviews**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.4 Admin Input data tentang Reviews                     |
+| Trigger            | admin dapat menginputkan data tentang Reviews |
+| Precondition       | Admin menginputkan data tentang Homepage ke Reviews |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang Reviews. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang Reviews.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Tidak Ada .        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.11 Mengunjungi website**
 
 | Nama Fungsi        |    pengunjung  Mengunjungi website             |
 | ------------------- | ---------------------------------- |
@@ -559,15 +590,25 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 **Tabel Menu**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|id_menu|int|Auto-increment dari id_FAQ|
-|judul|varchar|Berisi judul pada Menu sistem|
+|id_menu|int|Auto-increment dari id_menu|
+|nama|varchar|Berisi nama pada Menu sistem|
+|jenis|varchar|Berisi jenis pada Menu sistem|
 |deskripsi|varchar|Berisi deskripsi pada Menu sistem|
 |harga|varchar|Berisi harga pada Menu sistem|
 |gambar|varchar|Berisi gambar pada Menu sistem|
 
+**Tabel Reviews**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_reviews|int|Auto-increment dari id_reviews|
+|rating|int|Berisi rating pada dari menu sistem|
+|comment|varchar|Berisi comment pada Menu sistem|
+|nama|varchar|Berisi nama pada Menu sistem|
+|jawaban|varchar|Berisi jawaban pada Menu sistem|
+
 
 ## Pembagian tugas
-BAB 1 ->Nindy
+BAB 1 ->Rakha
 
 BAB 2 
 2.1
