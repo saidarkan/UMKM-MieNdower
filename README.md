@@ -1,4 +1,4 @@
-![alt text](Image/coverSRS.jpg?raw=true)
+![alt text](Gambar/Cover.png?raw=true)
 
 ## BAB I Pendahuluan
 
@@ -126,7 +126,7 @@ tidak ada
 tidak ada
 
 ## 2.2 Spesifikasi kebutuhan fungsional
-![alt text](Gambar/Usecase1.png?raw=true)
+![alt text](Gambar/Usecase2.png?raw=true)
 
 **2.2.1 Admin Login**
 
@@ -611,31 +611,20 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 BAB 1 ->Rakha
 
 BAB 2 
-2.1
-  
-  2.1.1 -> Nindy
-  
-  2.1.2 -> Nindy
-  
-  2.1.3 -> Ariyan
-  
-  2.1.4 -> Ariyan
- 
-  2.1.5 -> Ariyan
-  
-  2.1.6 -> Raditya
-  
-  2.1.7 -> Raditya
-  
-  2.1.8 -> Raditya
-
-2.2 semua poin-poin (nindy)
+2.1 Arkan
+2.2 Ridho (gambar) & Rakha (isi)
+2.3 Rakha
+2.4 Rakha
 
 BAB 3 
 
-3.1 nindy
+3.1 Arkan
 
-3.2 nindy
+3.2 Arkan
 
-3.3 Nindy
+3.3 Ridho
 
+## Pembagian tugas website 
+Rakha -> Membuat CRUD About, Artikel, Login
+Ridho -> Membuat CRUD FAQ, Promo, Homepage
+Ridho -> Membuat CRUD Menu, Location, Contact, Review, dan Tampilan 
