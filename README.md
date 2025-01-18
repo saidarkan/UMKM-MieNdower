@@ -239,7 +239,8 @@ Xref: Bagian 3.2.6,Input data Homepage
 
 Use Case: Input data About
 
-Diagram:![alt text](Gambar/AdminHomepage.png?raw=true)
+Diagram:
+![alt text](Gambar/AdminAbout.png?raw=true)
 
 
 Deskripsi Singkat
@@ -256,7 +257,8 @@ Xref: Bagian 3.2.7,Input data About
 
 Use Case: Input data Contact
 
-Diagram:![alt text](Gambar/AdminHomepage.png?raw=true)
+Diagram:
+![alt text](Gambar/AdminContact.png?raw=true)
 
 
 Deskripsi Singkat
@@ -284,46 +286,9 @@ Deskripsi Langkah-Langkah
 2. Admin mengakses fitur Management Location untuk melakukan pengelolaan data terkait Location.
 3. Admin dapat menambahkan atau memperbarui Nama Lokasi dan Link Lokasi.
 
-**2.2.10 Admin Management Contact**
-
-Use Case: Input data Contact
-
-Diagram:
-![alt text](Gambar/AdminContact.png?raw=true)
-
-Deskripsi Singkat:  
-Admin mengelola konten halaman *Contact* yang mencakup atribut *Nama Medsos*, *Link Medsos*, dan *Icon Medsos* untuk menampilkan informasi media sosial UMKM secara jelas dan menarik.
-
-Deskripsi Langkah-Langkah:  
-1. Admin mengakses fitur Management Contact pada sistem untuk mengelola data media sosial yang akan ditampilkan.  
-2. Admin dapat menambahkan data baru, seperti:  
-   - Nama Medsos untuk menyebutkan platform media sosial (misalnya, Instagram, Facebook, atau Twitter).  
-   - Link Medsos berupa tautan langsung ke akun resmi UMKM di platform tersebut.  
-   - Icon Medsos yang sesuai dengan logo atau ikon platform media sosial tersebut untuk memudahkan identifikasi.  
-3. Admin dapat memperbarui data yang sudah ada, seperti mengganti nama platform media sosial, memperbarui tautan jika ada perubahan akun, atau mengganti ikon agar lebih sesuai dengan tema atau pembaruan terbaru dari platform media sosial.  
-4. Setelah pengelolaan selesai, sistem akan menyimpan perubahan, dan data terbaru akan langsung ditampilkan pada halaman Contact, sehingga pengunjung website dapat dengan mudah menemukan dan mengikuti akun media sosial UMKM.  
-
-**2.2.11 Admin Management About**
-
-Use Case: Input data About
-
-Diagram:
-![alt text](Gambar/AdminAbout.png?raw=true)
-
-Deskripsi Singkat: 
-Admin mengelola konten halaman About yang mencakup atribut Judul, Deskripsi, dan Gambar untuk memastikan informasi profil UMKM yang ditampilkan akurat, informatif, dan menarik.
-Deskripsi Langkah-Langkah:  
-1. Admin mengakses fitur Management About pada sistem untuk memulai pengelolaan konten halaman About.  
-2. Admin dapat menambahkan data baru, seperti:  
-   - Judul untuk memberikan gambaran singkat tentang isi halaman.  
-   - Deskripsi yang menjelaskan lebih detail tentang profil UMKM, visi, dan misi.  
-   - Gambar untuk menambahkan daya tarik visual, seperti logo atau foto yang relevan.  
-3. Admin dapat memperbarui data yang sudah ada, seperti mengganti judul, memperbarui deskripsi untuk menyesuaikan informasi terbaru, atau mengganti gambar dengan yang lebih relevan.  
-4. Setelah pengelolaan selesai, sistem akan menyimpan perubahan, dan konten terbaru akan langsung ditampilkan di halaman *About* kepada pengunjung website.  
-
 Xref: Bagian 3.2.9, Login pengunjung
 
-**2.2.12 Customer Mengunjungi Website**
+**2.2.10 Customer Mengunjungi Website**
 
 Use Case: Customer melihat website
 
