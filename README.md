@@ -18,7 +18,7 @@ Website UMKM Mie Ndower merupakan website yang kami bangun untuk mempermudah pen
 |    SRS    | Software Requirement Specification       |
 |    Software Requirement Specification    | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna      |
 |    ERD    | Entity Relationship Diagram.       |
-|    ERD    | representasi visual dari hubungan antara entitas dalam sebuah sistem.       |
+|    Entity Relationship Diagram    | representasi visual dari hubungan antara entitas dalam sebuah sistem.       |
 
 ## 1.4 Referensi
 Referensi yang digunakan dalam pengembangan perangkat lunak ini adalah :
