@@ -85,9 +85,9 @@ Sistem Informasi Parenting memiliki 2 pengunjung yaitu admin dan pengunjung. Adm
 |  |  |
 | ![alt text](Customer/ReviewMenu.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan menu, jika pengunjung telah mengklik satu menu yang akan dilihat, maka pada halaman ini akan tampil review berupa rating dan komentar dari menu tersebut.|![alt text](Customer/Promo.png?raw=true) Pada halaman pengunjung terdapat halaman promo yang berisi gambar,deskripsi, dan judul  promo.
 |  |  |
-| ![alt text](CUstomer/DetailPromo.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Promo jika pengunjung telah mengklik satu promo yang akan dilihat, maka pada halaman ini akan tampil detail dari promo tersebut.|![alt text](Customer/Artikel.png?raw=true) Pada halaman pengunjung terdapat halaman artikel yang berisi gambar,judul,deskripsi dari artikel.
+| ![alt text](Customer/DetailPromo.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Promo jika pengunjung telah mengklik satu promo yang akan dilihat, maka pada halaman ini akan tampil detail dari promo tersebut.|![alt text](Customer/Artikel.png?raw=true) Pada halaman pengunjung terdapat halaman artikel yang berisi gambar,judul,deskripsi dari artikel.
 |  |  |
-| ![alt text](revisi/kontak.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Artikel jika pengunjung telah mengklik satu artikel yang akan dilihat, maka pada halaman ini akan tampil detail dari artikel dan rekomendasi artikel lain .
+| ![alt text](Customer/DetailArtikel.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Artikel jika pengunjung telah mengklik satu artikel yang akan dilihat, maka pada halaman ini akan tampil detail dari artikel dan rekomendasi artikel lain .
 
 
 **2.1.3 Antarmuka perangkat keras**
