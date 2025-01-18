@@ -294,7 +294,7 @@ tidak ada
 
 
 ## 3.1 Persyaratan Antarmuka Eksternal
-Salah satu cara mengakses website ini yaitu dengan registrasi, setelah registrasi akan login dengan memasukkan username dan password, kemudian sistem akan validasi login. setelah login berhasil pengunjung dapat melihat konten yang ada di website tersebut.
+tidak ada
 
 ## 3.2 Functional Requirement
 **3.2.1 Login Admin**
@@ -309,90 +309,120 @@ Salah satu cara mengakses website ini yaitu dengan registrasi, setelah registras
 |        | 3. Bila sukses, sistem akan mengarahkan ke dashboard admin.  |
 |        | 4. Bila gagal, sistem akan menampilkan peringatan. |
 |     Alternative       |                   Tidak Ada                   |
-| Post Condition     |                  admin dapat login dan mengakses webiste profile mie ndower                   |
+| Post Condition     |                  admin dapat login dan mengakses dashboard webiste profile mie ndower                   |
 |         Exception Push          |                  Username dan password salah                   |
 
-**3.2.2 Admin Input Informasi Artikel Parenting**
-| Nama Fungsi | Input Informasi Parenting |
+**3.2.2 Admin Input Menu**
+| Nama Fungsi | Input Informasi Website |
 | ------ | ------ |
-| Xref       | Bagian 3.2.2, Input data artikel parenting       |
-| Triger       | Membuka website sistem informasi parenting        |
-| Precondition | Menginput data artikel parenting |
-| Basic Path | 1. Sistem akan menampilkan tampilan input artikel. |
-|            | 2. Admin dapat melihat,menambahkan, dan mengupload kegiatan. |
+| Xref       | Bagian 2.2.2, Input data menu      |
+| Triger       | Membuka website profile mie ndower       |
+| Precondition | Menginput data menu |
+| Basic Path | 1. Sistem akan menampilkan tampilan input menu. |
+|            | 2. Admin dapat melihat,menambahkan, dan mengupload menu. |
 |            | 3. Sistem akan menyimpan ke database. |
 |            | 4. Jika sudah disimpan sistem akan menampilkan peringatan. |
 | Alternative | Tidak ada |     
-| Post Condition | Admin mengelola artikel
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti location, about, dan contact .        |
 | Exception Push | Tidak ada koneksi |
 
 
-**3.2.3 Input Dokumentasi Kegiatan**
+**3.2.3 Admin Input Promo**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.3 Admin Input Dokumentasi Kegiatan                     |
-| Trigger            | admin dapat menginputkan data Dokumentasi Kegiatan |
-| Precondition       | Admin menginputkan Data dokumentasi Kegiatan ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan publikasi kegiatan. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload kegiatan.   |
+| Xref               | Bagian 2.2.3 Admin Input Promo                     |
+| Trigger            | admin dapat menginputkan data Promo |
+| Precondition       | Admin menginputkan Data Promo ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan promo. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload promo.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti location, about, dan contact .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.4 Input data tentang BP3AM**
+**3.2.4 Input data FAQ**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.4 Admin Input data tentang BP3AM                     |
-| Trigger            | admin dapat menginputkan data tentang BP3AM |
-| Precondition       | Admin menginputkan data tentang BP3AM ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang BP3AM. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang BP3AM.   |
+| Xref               | Bagian 2.2.4 Admin Input data tentang FAQ                     |
+| Trigger            | admin dapat menginputkan data tentang FAQ |
+| Precondition       | Admin menginputkan data tentang FAQ ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang FAQ. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang FAQ.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti location, about, dan contact .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.5 Input data contact BP3AM**
+**3.2.5 Input data Artikel**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.5 Admin Input data contact BP3AM                     |
-| Trigger            | admin dapat menginputkan data contact BP3AM |
-| Precondition       | Admin menginputkan data contact BP3AM ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data contact BP3AM. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data contact BP3AM.   |
+| Xref               | Bagian 2.2.4 Admin Input data tentang Artikel                     |
+| Trigger            | admin dapat menginputkan data tentang Artikel |
+| Precondition       | Admin menginputkan data tentang Artikel ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang Artikel. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang Artikel.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti location, about, dan contact .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.6 Input data team BP3AM**
+**3.2.6 Input data Homepage**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.6 Admin Input data team BP3AM                     |
-| Trigger            | admin dapat menginputkan data team BP3AM |
-| Precondition       | Admin menginputkan data team BP3AM ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data team BP3AM. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data team BP3AM.   |
+| Xref               | Bagian 2.2.4 Admin Input data tentang Homepage                     |
+| Trigger            | admin dapat menginputkan data tentang Homepage |
+| Precondition       | Admin menginputkan data tentang Homepage ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang Homepage. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang Homepage.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Tidak Ada .        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.6 Mengunjungi website**
+**3.2.7 Input data About**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.4 Admin Input data tentang About                     |
+| Trigger            | admin dapat menginputkan data tentang About |
+| Precondition       | Admin menginputkan data tentang Homepage ke About |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang About. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang About.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Tidak Ada .        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.8 Input data Location**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.4 Admin Input data tentang Location                     |
+| Trigger            | admin dapat menginputkan data tentang Location |
+| Precondition       | Admin menginputkan data tentang Homepage ke Location |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang Location. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang Location.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Tidak Ada .        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.9 Mengunjungi website**
 
 | Nama Fungsi        |    pengunjung  Mengunjungi website             |
 | ------------------- | ---------------------------------- |
 | Xref               | Bagian 2.2.6 Pengunjung Mengunjungi website             |
-| Trigger            |pengunjung Dapat mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia |
+| Trigger            |pengunjung Dapat mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi menu yang telah tersedia |
 | Precondition       |pengunjung Mengunjungi website |
 | Basic Path         | 1. Sistem akan menampilkan halaman-halaman konten. |
 |                    |  2.pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia    |
