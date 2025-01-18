@@ -133,7 +133,7 @@ tidak ada
 Use Case: Login
 
 Diagram:
-![alt text](Gambar/AdminLogin.png=true)
+![alt text](Gambar/AdminLogin.png?raw=true)
 
 Deskripsi Singkat 
 Admin melakukan login terlebih dahulu sebelum masuk ke tampilan home admin, apabila gagal login akan muncul pesan alert error login. 
