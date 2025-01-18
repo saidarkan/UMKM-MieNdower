@@ -148,11 +148,11 @@ Xref: Bagian 3.2.1, Login Admin
 
 **2.2.2 Admin Management Menu**
 
-Use Case: INput data Menu
+Use Case: Input data Menu
 
 Diagram:
 
-![alt text](Image/2.2.2.png?raw=true)
+![alt text](Gambar/AdminMenu.png?raw=true)
 
 Deskripsi Singkat
 Admin mengelola menu yang terdiri dari Judul Menu, Deskripsi Menu, Gambar Menu, dan Harga Menu.
@@ -170,7 +170,7 @@ Xref: Bagian 3.2.2, Input data Artikel Parenting
 Use Case: Input data Promo
 
 Diagram:
-![alt text](Image/2.2.3.png?raw=true)
+![alt text](Gambar/AdminPromo.png?raw=true)
 
 Deskripsi Singkat
 Admin mengelola promo yang terdiri dari Judul Promo, Deskripsi Promo, Tanggal Promo, dan Tanggal berakhir promo.
@@ -187,7 +187,7 @@ Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
 
 Use Case: Input data FAQ
 
-Diagram:![alt text](revisi/revisi2.jpg?raw=true)
+Diagram:![alt text](Gambar/AdminFAQ.png?raw=true)
 
 
 Deskripsi Singkat
@@ -204,7 +204,7 @@ Xref: Bagian 3.2.3,data tentang B3AM
 
 Use Case: Input data Artikel
 
-Diagram:![alt text](revisi/revisi4.jpg?raw=true)
+Diagram:![alt text](Gambar/AdminArtikel.png?raw=true)
 
 
 Deskripsi Singkat
