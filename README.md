@@ -71,7 +71,7 @@ Sistem Informasi Parenting memiliki 2 pengunjung yaitu admin dan pengunjung. Adm
 **Halaman Admin**
 |  |  |
 |--|--|
-| ![alt text](revisi/loginAdmin.png?raw=true) halaman login admin diminta untuk mengisi username dan password.| ![alt text](revisi/Dashboard.png?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
+| ![alt text](Admin/Login.png?raw=true) halaman login admin diminta untuk mengisi username dan password.| ![alt text](revisi/Dashboard.png?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
 |  |  |
 | ![alt text](revisi/DataKegiatan.png?raw=true) Pada halaman admin akan terdapat halaman unutk mengelola data menu, namun tidak hanya data menu tapi admin juga dapat mengelola data artikel, data kontak, data about, data hompegae, data faq, dan data promo  dengan tamnpilan yang sama di halaman yang berbeda.| ![alt text](revisi/TambahDataKegiatan.png?raw=true) Pada halaman mengelola data menu, admin juga dapat menambahkan data menu, begitu juga dengan pengelolaan data di tabel lainnya.
 |  |  |
