@@ -57,7 +57,7 @@ Berikut ini fungsi admin yaitu:
 - Manage Reviews
   
 ## 2.1 Perspektif produk
-Sistem Informasi Parenting adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengunjung. Pengolahan data dilakukan oleh admin pada website dan pengunjung hanya melihat informasi pada website.
+Web Profile Mie Ndower adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengunjung. Pengolahan data dilakukan oleh admin pada website, sedangkan pengunjung hanya dapat melihat informasi yang telah disediakan pada website.
 
 **2.1.1 Antarmuka Sistem**
 ![alt text](revisi/revisi1.jpg?raw=true)
