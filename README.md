@@ -60,7 +60,7 @@ Berikut ini fungsi admin yaitu:
 Web Profile Mie Ndower adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengunjung. Pengolahan data dilakukan oleh admin pada website, sedangkan pengunjung hanya dapat melihat informasi yang telah disediakan pada website.
 
 **2.1.1 Antarmuka Sistem**
-![alt text](Gambar/Usecase.jpg?raw=true)
+![alt text](Gambar/Usecase.png?raw=true)
 
 Sistem Informasi Parenting memiliki 2 pengunjung yaitu admin dan pengunjung. Admin mempunyai fungsi mengelola data informasi dan Pengunjung bisa melihat informasi serta memberikan komentar.
 
