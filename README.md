@@ -18,6 +18,8 @@ Sistem Informasi Parenting merupakan aplikasi yang kami bangun untuk mempermudah
 |    Login    | Digunakan untuk mengakses aplikasi       |
 |   Software Requirement Specification     | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna       |
 |    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
+|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
+|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
 
 ## 1.4 Referensi
 Referensi yang digunakan dalam pengembangan perangkat lunak ini adalah :
