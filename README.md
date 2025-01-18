@@ -303,7 +303,7 @@ Deskripsi Langkah-Langkah:
 3. Admin dapat memperbarui data yang sudah ada, seperti mengganti nama platform media sosial, memperbarui tautan jika ada perubahan akun, atau mengganti ikon agar lebih sesuai dengan tema atau pembaruan terbaru dari platform media sosial.  
 4. Setelah pengelolaan selesai, sistem akan menyimpan perubahan, dan data terbaru akan langsung ditampilkan pada halaman Contact, sehingga pengunjung website dapat dengan mudah menemukan dan mengikuti akun media sosial UMKM.  
 
-**2.2.10 Admin Management About**
+**2.2.11 Admin Management About**
 
 Use Case: Input data About
 
