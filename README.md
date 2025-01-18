@@ -612,8 +612,11 @@ BAB 1 ->Rakha
 
 BAB 2 
 2.1 Arkan
+
 2.2 Ridho (gambar) & Rakha (isi)
+
 2.3 Rakha
+
 2.4 Rakha
 
 BAB 3 
@@ -625,6 +628,9 @@ BAB 3
 3.3 Ridho
 
 ## Pembagian tugas website 
+
 Rakha -> Membuat CRUD About, Artikel, Login
+
 Ridho -> Membuat CRUD FAQ, Promo, Homepage
+
 Ridho -> Membuat CRUD Menu, Location, Contact, Review, dan Tampilan 
