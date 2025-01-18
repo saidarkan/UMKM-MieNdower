@@ -565,15 +565,6 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |harga|varchar|Berisi harga pada Menu sistem|
 |gambar|varchar|Berisi gambar pada Menu sistem|
 
-**Tabel team**
-|Data Item|Tipe Data|Deskripsi|
-|--|--|--|
-|id_team|int|Auto-increment dari Id_team|
-|gambar|varchar|Berisi gambar didalam team sistem|
-|nama|text|Berisi nama team sistem|
-|jabatan|varchar|Berisi jabatan pada team sistem|
-
-
 
 ## Pembagian tugas
 BAB 1 ->Nindy
