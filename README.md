@@ -221,7 +221,7 @@ Xref: Bagian 3.2.3,data contact B3AM
 
 Use Case: Input data Homepage
 
-Diagram:![alt text](revisi/revisi3.jpg?raw=true)
+Diagram:![alt text](Gambar/AdminHomepage.png?raw=true)
 
 
 Deskripsi Singkat
@@ -241,7 +241,7 @@ Xref: Bagian 3.2.3,data team B3AM
 Use Case: Input data Location
 
 Diagram:
-![alt text](Image/pengunjungMengunjungiWeb.png?raw=true)
+![alt text](Gambar/AdminLocation.png?raw=true)
 
 Deskripsi Singkat 
 Admin mengelola Location yang terdiri dari Nama Lokasi dan Link Lokasi.
@@ -257,7 +257,7 @@ Xref: Bagian 3.2.7, Login pengunjung
 Use Case: Customer melihat website
 
 Diagram:
-![alt text](Image/pengunjungMengunjungiWeb.png?raw=true)
+![alt text](Gambar/Customer.png?raw=true)
 
 Deskripsi Singkat 
 Customer hanya dapat melihat website dan hanya bisa menambahkan review
