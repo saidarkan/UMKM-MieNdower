@@ -532,23 +532,38 @@ Struktur data logika pada sistem informasi parenting terdapat struktur Database 
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
 |id_homepage|int|Auto-increment dari id_homepage|
-|pembuka|varchar|Berisi pembuka pada kegiatan sistem|
-|judul1|varchar|Berisi judul1 pada kegiatan sistem|
-|judul2|varchar|Berisi judul2 pada kegiatan sistem|
-|deskripsi_judul|text|Berisi deskripsi_judul kegiatan sistem|
-|subjudul|text|Berisi subjudul kegiatan sistem|
-|deskripsi_subjudul|text|Berisi deskripsi_subjudul kegiatan sistem|
+|pembuka|varchar|Berisi pembuka pada Homepage sistem|
+|judul1|varchar|Berisi judul1 pada Homepage sistem|
+|judul2|varchar|Berisi judul2 pada Homepage sistem|
+|deskripsi_judul|text|Berisi deskripsi_judul Homepage sistem|
+|subjudul|text|Berisi subjudul Homepage sistem|
+|deskripsi_subjudul|text|Berisi deskripsi_subjudul Homepage sistem|
 
 **Tabel Promo**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
 |id_promo|int|Auto-increment dari id_promo|
-|judul|varchar|Berisi judul pada kegiatan sistem|
-|deskripsi|text|Berisi deskripsi kegiatan sistem|
-|tanggal|varchar|Berisi tanggal pada kegiatan sistem|
-|jenis|text|Berisi jenis kegiatan sistem|
-|tanggal_berakhir|text|Berisi tanggal_berakhir kegiatan sistem|
+|judul|varchar|Berisi judul pada Promo sistem|
+|deskripsi|text|Berisi deskripsi Promo sistem|
+|tanggal|varchar|Berisi tanggal pada Promo sistem|
+|jenis|text|Berisi jenis Promo sistem|
+|tanggal_berakhir|text|Berisi tanggal_berakhir Promo sistem|
 
+**Tabel FAQ**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_FAQ|int|Auto-increment dari id_FAQ|
+|pertanyaan|varchar|Berisi pertanyaan pada FAQ sistem|
+|jawaban|varchar|Berisi jawaban pada FAQ sistem|
+
+**Tabel Menu**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_menu|int|Auto-increment dari id_FAQ|
+|judul|varchar|Berisi judul pada Menu sistem|
+|deskripsi|varchar|Berisi deskripsi pada Menu sistem|
+|harga|varchar|Berisi harga pada Menu sistem|
+|gambar|varchar|Berisi gambar pada Menu sistem|
 
 **Tabel team**
 |Data Item|Tipe Data|Deskripsi|
