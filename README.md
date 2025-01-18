@@ -483,7 +483,7 @@ tidak ada
 | Exception Push     |    Jika ada kesalahan server atau gangguan teknis, sistem akan menampilkan pesan kesalahan kepada pengguna. Pengguna dapat mencoba kembali atau menghubungi dukungan teknis.    |
 
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
-![alt text](Image/3.3.png?raw=true)
+![alt text](Gambar/NonFungsional.png?raw=true)
 **3.3.1 Logika Struktur Data**
 Struktur data logika pada sistem informasi parenting terdapat struktur Database yang dijelaskan menggunakan ERD.
 
