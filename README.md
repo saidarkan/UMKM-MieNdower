@@ -128,7 +128,7 @@ tidak ada
 tidak ada
 
 ## 2.2 Spesifikasi kebutuhan fungsional
-Gambar/Fungsional.png
+[Gambar/Fungsional.png](https://github.com/saidarkan/UMKM-MieNdower/blob/aff244c1bc847ad9ef2055b7afe60219494df7ad/Gambar/Fungsional.png)
 
 **2.2.1 Admin Login**
 
