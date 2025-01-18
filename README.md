@@ -31,25 +31,31 @@ Bab selanjutnya yaitu menjelaskan sistem yang di terapkan pada aplikasi. Menjela
 
 
 ## BAB II GAMBARAN UMUM
-Ilmu parenting merupakan ilmu yang sangat dibutuhkan para orang tua agar dapat melaksanakan tugas sebagai orang tua dengan baik dan benar, pada zaman era globalisasi perkembangan teknologi begitu sangat pesat, salah satunya ialah perkembangan teknologi di bidang software engineering dimana software engineering dapat digunakan dalam kehidupan sehari - hari .dalam studi kasus project ini kami menganalisis kebutuhan suatu Dinas Perlindungan Anak di Pekanbaru, kasus yang kami peroleh yaitu pembuatan informasi dan edukasi seputar parenting yang bisa diakses dimana saja dan kapan saja oleh para orang tua. Maka dari itu kami merancang Sebuah sistem informasi parenting, platform atau aplikasi yang dirancang untuk membantu orangtua dalam mengelola, mendidik, dan merawat anak-anak mereka. Sistem yang kami buat menyediakan  fitur dan fungsionalitas untuk membantu orangtua dalam mengatasi tugas-tugas sehari-hari yang terkait dengan mengasuh anak-anak mereka. Berikut akan kami jelaskan sistem software kami, pengunjung fungsi utama yaitu:
+UMKM adalah tulang punggung perekonomian masyarakat, dan di tengah pesatnya perkembangan teknologi di era globalisasi ini, sektor UMKM terus beradaptasi untuk bertahan dan berkembang. Salah satu inovasi penting adalah pemanfaatan teknologi, khususnya di bidang software engineering, yang dapat membantu meningkatkan efisiensi dan daya saing UMKM dalam kehidupan sehari-hari.
 
-- View artikel parenting
-- View dokumentasi kegiatan
-- View tentang BP3AM
-- View Contact BP3AM
-- View Team BP3AM
+Dalam studi kasus ini, kami menganalisis kebutuhan UMKM Mie Ndower yang telah berdiri sejak September 2023 di Pekanbaru. UMKM ini terinspirasi dari kecintaan pemiliknya terhadap mie, dan hadir dengan cita rasa khas yang unik dan menggugah selera. Tantangan utama yang kami temui adalah bagaimana memberikan informasi lengkap dan akses mudah kepada pelanggan terkait produk, promo, lokasi, dan berbagai hal tentang Mie Ndower.
+
+Maka dari itu, kami merancang sebuah sistem informasi berbasis web, sebuah platform modern yang dirancang untuk membantu UMKM Mie Ndower dalam memberikan pengalaman terbaik kepada pelanggannya. Sistem ini dilengkapi dengan berbagai fitur yang dapat membantu pengunjung dan admin dalam mengelola serta mendapatkan informasi seputar Mie Ndower, pengunjung fungsi utama yaitu:
+
+- View Menu
+- View Promo
+- View Artikel
+- View FAQ
+- View About
+- View Locations
+- View Contact
+- Input Reviews
 
 Berikut ini fungsi admin yaitu:
 - Login
-- Input artikel parenting
-- Input dokumentasi kegiatan
-- Input data tentang BP3AM
-- Input data contact BP3AM
-- Input data team BP3AM
-- Update data
-- Delete data
-- Edit data
-
+- Input, Edit, Delete Menu
+- Input, Edit, Delete Promo
+- Input, Edit, Delete Artikel
+- Input, Edit, Delete FAQ
+- Input, Edit, Delete About
+- Input, Edit, Delete Locations
+- Manage Reviews
+  
 ## 2.1 Perspektif produk
 Sistem Informasi Parenting adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengunjung. Pengolahan data dilakukan oleh admin pada website dan pengunjung hanya melihat informasi pada website.
 
