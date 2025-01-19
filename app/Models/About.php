@@ -9,6 +9,8 @@ class About extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description'];
+    public $timestamps = false;
+
+    protected $fillable = ['judul', 'deskripsi','gambar'];
 }
 

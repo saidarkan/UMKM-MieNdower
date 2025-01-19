@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
         $table->id();
-        $table->string('title');
-        $table->text('description');
-        $table->timestamps();
+        $table->string('judul');
+        $table->text('deskripsi');
+        $table->text('gambar');
+
         });
     }
 

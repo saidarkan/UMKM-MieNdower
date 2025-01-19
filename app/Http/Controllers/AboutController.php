@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AboutController extends Controller
 {
@@ -21,11 +22,20 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required',
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi file gambar
         ]);
 
-        About::create($request->all());
+        $data = $request->all();
+
+        // Proses upload gambar jika ada
+        if ($request->hasFile('gambar')) {
+            $data['gambar'] = $request->file('gambar')->store('about_images', 'public');
+        }
+
+        About::create($data);
+
         return redirect()->route('about.index')->with('success', 'Data berhasil ditambahkan');
     }
 
@@ -42,18 +52,37 @@ class AboutController extends Controller
     public function update(Request $request, About $about)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required',
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi file gambar
         ]);
 
-        $about->update($request->all());
+        $data = $request->all();
+
+        // Proses upload gambar jika ada
+        if ($request->hasFile('gambar')) {
+            // Hapus gambar lama jika ada
+            if ($about->gambar && Storage::disk('public')->exists($about->gambar)) {
+                Storage::disk('public')->delete($about->gambar);
+            }
+            // Simpan gambar baru
+            $data['gambar'] = $request->file('gambar')->store('about_images', 'public');
+        }
+
+        $about->update($data);
+
         return redirect()->route('about.index')->with('success', 'Data berhasil diupdate');
     }
 
     public function destroy(About $about)
     {
+        // Hapus gambar dari penyimpanan jika ada
+        if ($about->gambar && Storage::disk('public')->exists($about->gambar)) {
+            Storage::disk('public')->delete($about->gambar);
+        }
+
         $about->delete();
+
         return redirect()->route('about.index')->with('success', 'Data berhasil dihapus');
     }
 }
-
