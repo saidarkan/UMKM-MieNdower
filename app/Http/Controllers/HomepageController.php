@@ -10,8 +10,8 @@ class HomepageController extends Controller
     public function index()
     {
         // Ambil data homepage dengan paginasi
-        $homepage = Homepage::paginate(10);
-        return view('homepage.index', compact('homepage'));
+        $homepages = Homepage::paginate(10);
+        return view('homepage.index', compact('homepages'));
     }
 
     public function create()
@@ -21,34 +21,39 @@ class HomepageController extends Controller
     }
 
     public function store(Request $request)
-{
-    // Validasi input
-    $validated = $request->validate([
-        'judul' => 'required|string|max:255',
-        'deskripsi_judul' => 'required|string',
-        'subjudul' => 'nullable|string|max:255',
-        'deskripsi_subjudul' => 'nullable|string',
-        'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-    ]);
+    {
+        // Validasi input
+        $validated = $request->validate([
+            'pembuka' => 'required|string|max:255',
+            'judul1' => 'required|string|max:255',
+            'judul2' => 'required|string|max:255',
+            'deskripsi_judul' => 'required|string',
+            'subjudul' => 'nullable|string|max:255',
+            'deskripsi_subjudul' => 'nullable|string',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
 
-    // Sanitasi deskripsi untuk menghapus tag HTML
-    $validated['deskripsi_judul'] = strip_tags($validated['deskripsi_judul']);
-    $validated['deskripsi_subjudul'] = strip_tags($validated['deskripsi_subjudul']);
+        // Sanitasi deskripsi untuk menghapus tag HTML
+        $validated['deskripsi_judul'] = strip_tags($validated['deskripsi_judul']);
+        $validated['deskripsi_subjudul'] = strip_tags($validated['deskripsi_subjudul']);
 
-    // Simpan gambar jika ada
-    $imagePath = $request->hasFile('gambar') ? $request->file('gambar')->store('homepage', 'public') : null;
+        // Simpan gambar jika ada
+        $imagePath = $request->hasFile('gambar') ? $request->file('gambar')->store('homepage', 'public') : null;
 
-    // Simpan data homepage ke database
-    Homepage::create([
-        'judul' => $validated['judul'],
-        'deskripsi_judul' => $validated['deskripsi_judul'],
-        'subjudul' => $validated['subjudul'],
-        'deskripsi_subjudul' => $validated['deskripsi_subjudul'],
-        'gambar' => $imagePath,
-    ]);
+        // Simpan data homepage ke database
+        Homepage::create([
+            'pembuka' => $validated['pembuka'],
+            'judul1' => $validated['judul1'],
+            'judul2' => $validated['judul2'],
+            'deskripsi_judul' => $validated['deskripsi_judul'],
+            'subjudul' => $validated['subjudul'],
+            'deskripsi_subjudul' => $validated['deskripsi_subjudul'],
+            'gambar' => $imagePath,
+        ]);
 
-    return redirect()->route('homepage.index')->with('success', 'Homepage berhasil ditambahkan!');
-}
+        return redirect()->route('homepage.index')->with('success', 'Homepage berhasil ditambahkan!');
+    }
+
     public function edit(Homepage $homepage)
     {
         // Return view untuk edit homepage
@@ -59,7 +64,9 @@ class HomepageController extends Controller
     {
         // Validasi input
         $validated = $request->validate([
-            'judul' => 'required|string|max:255',
+            'pembuka' => 'required|string|max:255',
+            'judul1' => 'required|string|max:255',
+            'judul2' => 'required|string|max:255',
             'deskripsi_judul' => 'required|string',
             'subjudul' => 'nullable|string|max:255',
             'deskripsi_subjudul' => 'nullable|string',
@@ -78,7 +85,9 @@ class HomepageController extends Controller
 
         // Update data homepage
         $homepage->update([
-            'judul' => $validated['judul'],
+            'pembuka' => $validated['pembuka'],
+            'judul1' => $validated['judul1'],
+            'judul2' => $validated['judul2'],
             'deskripsi_judul' => $validated['deskripsi_judul'],
             'subjudul' => $validated['subjudul'],
             'deskripsi_subjudul' => $validated['deskripsi_subjudul'],
