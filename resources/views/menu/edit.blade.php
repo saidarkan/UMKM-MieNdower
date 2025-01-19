@@ -13,6 +13,12 @@
                     <input type="text" name="nama_menu" id="nama_menu" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm" value="{{ old('nama_menu', $menu->nama_menu) }}" required>
                 </div>
 
+                <!-- Nama Menu -->
+                <div class="mb-4">
+                    <label for="deskripsi_menu" class="block text-sm font-medium text-gray-700">Deskripsi Menu</label>
+                    <input type="text" name="deskripsi_menu" id="deskripsi_menu" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm" value="{{ old('deskripsi_menu', $menu->deskripsi_menu) }}" required>
+                </div>
+
                 <!-- Harga Menu -->
                 <div class="mb-4">
                     <label for="harga_menu" class="block text-sm font-medium text-gray-700">Harga Menu</label>

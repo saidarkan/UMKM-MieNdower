@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
@@ -13,12 +14,19 @@ class MenuController extends Controller
      */
     public function index()
     {
-        // Ambil semua menu
+        // Jika sudah login, arahkan ke view admin.menu dengan data
+        if (Auth::check()) {
+            $menus = Menu::all();
+
+            return view('admin.menu', compact('menus'));
+        }
+
+        // Jika belum login, ambil semua menu dan arahkan ke view menu.index
         $menus = Menu::all();
 
-        // Kirim data ke view welcome
         return view('menu.index', compact('menus'));
     }
+
 
 
 
@@ -62,18 +70,54 @@ class MenuController extends Controller
         return redirect()->route('menus.index')->with('success', 'Menu berhasil ditambahkan.');
     }
 
+    public function storeReview(Request $request, $id)
+{
+    $request->validate([
+        'rating' => 'required|integer|min:1|max:5',
+        'comment' => 'required|string|max:1000',
+        'nama' => 'required|string|max:1000',
+    ]);
+
+    $menu = Menu::findOrFail($id);
+
+    $menu->reviews()->create([
+        'rating' => $request->rating,
+        'comment' => $request->comment,
+        'nama' => $request->nama,
+    ]);
+
+    return redirect()->route('menu.show', $menu->id)->with('success', 'Komentar berhasil ditambahkan!');
+}
+
+
     /**
      * Display the specified resource.
      */
     // MenuController.php
-public function show($id)
-{
-    // Ambil menu berdasarkan ID
-    $menu = Menu::findOrFail($id);
+    public function show($id)
+    {
+        // Ambil menu berdasarkan ID
+        $menu = Menu::findOrFail($id);
 
-    // Kembalikan data dalam format JSON
-    return response()->json($menu);
-}
+        // Ambil review dengan pagination
+        $reviews = $menu->reviews()->paginate(4); // Pagination untuk 4 komentar per halaman
+
+        // Hitung rata-rata rating
+        $averageRating = $menu->reviews->avg('rating');
+
+        // Ambil menu lainnya dengan kategori yang sama, kecuali menu yang sedang dilihat
+        $recommendedMenus = Menu::where('jenis_menu', $menu->jenis_menu)
+                                ->where('id', '!=', $menu->id) // Exclude current menu
+                                ->take(4) // Ambil 4 menu rekomendasi
+                                ->get();
+
+        // Kirim data ke view
+        return view('menu.show', compact('menu', 'reviews', 'recommendedMenus', 'averageRating'));
+    }
+
+
+
+
 
 
     /**
@@ -93,6 +137,7 @@ public function show($id)
         // Validate the data
         $request->validate([
             'nama_menu' => 'required|string|max:255',
+            'deskripsi_menu' => 'required|string',
             'harga_menu' => 'required|numeric',
             'gambar_menu' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -102,6 +147,7 @@ public function show($id)
 
         // Update the menu data
         $menu->nama_menu = $request->nama_menu;
+        $menu->deskripsi_menu = $request->deskripsi_menu;
         $menu->harga_menu = $request->harga_menu;
 
         // Handle the image upload

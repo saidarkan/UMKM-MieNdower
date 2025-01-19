@@ -23,6 +23,12 @@ class Menu extends Model
         'gambar_menu',
 
     ];
+    // Menu.php
+public function reviews()
+{
+    return $this->hasMany(Review::class);
+}
+
 
     // If you're using timestamps, Laravel will automatically manage them
     // If your table does not have 'created_at' and 'updated_at' columns, you can disable timestamps like this:

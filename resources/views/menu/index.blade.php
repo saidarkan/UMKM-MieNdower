@@ -1,6 +1,7 @@
 <x-app-layout>
     <div class="relative isolate bg-gray-900 py-24 sm:py-32" id="about">
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <!-- Gambar Latar Belakang dengan efek blur -->
         <div class="absolute inset-0 -z-10 w-full min-h-[40vh]">
@@ -50,24 +51,43 @@
                         class="text-gray-500 hover:text-red-600 px-3 py-2 text-lg font-medium border-b-2 border-transparent hover:border-red-600 transition">
                         Bakso Ndower
                     </a>
-                    <a href="#topping"
-                        class="text-gray-500 hover:text-red-600 px-3 py-2 text-lg font-medium border-b-2 border-transparent hover:border-red-600 transition">
-                        Topping
-                    </a>
+
                 </nav>
             </div>
 
+
             <!-- Semua Kategori -->
-            @foreach (['mie' => 'Mie Ndower', 'pangsit' => 'Pangsit Ndower', 'bakso' => 'Bakso Ndower', 'topping' => 'Topping Ndower'] as $category => $title)
+            @foreach (['mie' => 'Mie Ndower', 'pangsit' => 'Pangsit Ndower', 'bakso' => 'Bakso Ndower'] as $category => $title)
                 <div id="{{ $category }}" class="mt-12 border-t border-gray-300 pt-4">
                     <!-- Judul Kategori -->
                     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
-                    <h1 class="text-center text-xl py-4 font-extrabold text-red-600 tracking-widest sm:text-5xl"
+                    @if (session('success'))
+                        <div x-data="{ show: true }" x-show="show"
+                            class="bg-green-500 text-white p-4 rounded-lg mb-6 transition duration-500 ease-in-out transform hover:scale-105">
+                            <div class="flex items-center justify-between">
+                                <span>{{ session('success') }}</span>
+                                <button @click="show = false"
+                                    class="text-white font-bold focus:outline-none">&times;</button>
+                            </div>
+                        </div>
+                    @endif
 
-                    style="font-family: 'Bangers', cursive;">
-                    {{ $title }}
-                </h1>
+                    @if (session('error'))
+                        <div x-data="{ show: true }" x-show="show"
+                            class="bg-red-500 text-white p-4 rounded-lg mb-6 transition duration-500 ease-in-out transform hover:scale-105">
+                            <div class="flex items-center justify-between">
+                                <span>{{ session('error') }}</span>
+                                <button @click="show = false"
+                                    class="text-white font-bold focus:outline-none">&times;</button>
+                            </div>
+                        </div>
+                    @endif
+
+                    <h1 class="text-center text-xl py-4 font-extrabold text-red-600 tracking-widest sm:text-5xl"
+                        style="font-family: 'Bangers', cursive;">
+                        {{ $title }}
+                    </h1>
 
                     <!-- Deskripsi Kategori -->
                     <p class="text-center text-gray-500 mb-6 sm:text-lg">
@@ -84,16 +104,33 @@
                         @endphp
 
                         @forelse ($filteredMenus as $menu)
-                            <div class="group rounded-lg shadow-md overflow-hidden cursor-pointer"
-                                onclick="openModal({{ $menu->id }})">
+                        <div class="group rounded-lg shadow-md overflow-hidden cursor-pointer">
+                            <a href="{{ route('menu.show', $menu->id) }}">
                                 <img src="{{ asset('storage/' . $menu->gambar_menu) }}" alt="{{ $menu->nama_menu }} "
                                     class="w-full h-[250px] rounded-lg bg-gray-200 object-cover group-hover:opacity-75">
-                                <div class="text-center mt-4">
-                                    <h3 class="text-sm text-gray-700">{{ $menu->nama_menu }}</h3>
-                                    <p class="text-lg font-medium text-gray-900">
-                                        Rp{{ number_format($menu->harga_menu, 0, ',', '.') }}</p>
+                            </a>
+                            <div class="text-center mt-4">
+                                <h3 class="text-sm text-gray-700">{{ $menu->nama_menu }}</h3>
+                                 <!-- Rata-Rata Rating dalam Bentuk Bintang -->
+                                 <div class="flex justify-center items-center mt-2">
+                                    <span class="text-yellow-500">
+                                        @php
+                                            $averageRating = $menu->reviews->avg('rating');
+                                        @endphp
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            <i class="fas fa-star {{ $i <= round($averageRating) ? 'text-yellow-500' : 'text-gray-300' }}"></i>
+                                        @endfor
+                                    </span>
+                                    <span class="ml-2 text-gray-500 text-sm">{{ number_format($averageRating, 1) }} / 5</span>
                                 </div>
+                                <p class="text-lg font-medium text-gray-900">
+                                    Rp{{ number_format($menu->harga_menu, 0, ',', '.') }}
+                                </p>
+
+
                             </div>
+                        </div>
+
                         @empty
                             <p class="text-gray-500">Tidak ada menu untuk kategori ini.</p>
                         @endforelse
