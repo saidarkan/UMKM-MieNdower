@@ -10,9 +10,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('promo', function (Blueprint $table) {
+        Schema::create('promos', function (Blueprint $table) {
             $table->id();
             $table->string('nama_promo');
+            $table->string('jenis_promo');
             $table->text('deskripsi_promo');
             $table->string('gambar_promo');
             $table->date('tanggal_promo');

@@ -14,6 +14,18 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Jenis Promo</label>
+                <select name="jenis_promo" class="mt-1 block w-full border-gray-300 rounded-md" required>
+                    <option value="berlangsung" {{ $promo->jenis_promo === 'berlangsung' ? 'selected' : '' }}>Berlangsung</option>
+                    <option value="berakhir" {{ $promo->jenis_promo === 'berakhir' ? 'selected' : '' }}>Berakhir</option>
+                </select>
+                @error('jenis_promo')
+                    <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
+                @enderror
+            </div>
+
+
             <!-- Deskripsi Promo -->
             <div class="mb-4">
                 <label class="block text-sm font-medium">Deskripsi Promo</label>

@@ -13,6 +13,19 @@
                 @enderror
             </div>
 
+              <!-- Nama Promo -->
+              <div>
+                <label for="jenis_promo" class="block text-sm font-medium text-gray-700">Jenis Promo</label>
+                <select name="jenis_promo" id="jenis_promo" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <option value="berlangsung">Berlangsung</option>
+                    <option value="berakhir">Berakhir</option>
+                </select>
+                @error('jenis_promo')
+                    <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
+                @enderror
+            </div>
+
+
             <!-- Deskripsi Promo -->
             <div>
                 <label for="deskripsi_promo" class="block text-sm font-medium text-gray-700">Deskripsi Promo</label>

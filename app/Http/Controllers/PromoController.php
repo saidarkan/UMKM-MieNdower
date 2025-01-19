@@ -4,11 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Promo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PromoController extends Controller
 {
     public function index()
     {
+
+        if (Auth::check()) {
+            $promo = Promo::all();
+            return view('admin.promo', compact('promo'));
+        }
+
+        // Jika belum login, ambil semua menu dan arahkan ke view menu.index
         $promo = Promo::paginate(10);
         return view('promo.index', compact('promo'));
     }
@@ -24,6 +32,7 @@ class PromoController extends Controller
         // Validasi input
         $validated = $request->validate([
             'nama_promo' => 'required|string|max:255',
+            'jenis_promo' => 'required|string|max:255',
             'deskripsi_promo' => 'required|string',
             'gambar_promo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'tanggal_promo' => 'required|date',
@@ -36,6 +45,7 @@ class PromoController extends Controller
         // Simpan data promo ke database
         Promo::create([
             'nama_promo' => $validated['nama_promo'],
+            'jenis_promo' => $validated['jenis_promo'],
             'deskripsi_promo' => $validated['deskripsi_promo'],
             'gambar_promo' => $imagePath,
             'tanggal_promo' => $validated['tanggal_promo'],
@@ -45,8 +55,12 @@ class PromoController extends Controller
         return redirect()->route('promo.index')->with('success', 'Promo berhasil ditambahkan!');
     }
 
-    public function show(Promo $promo)
+    public function show($id)
     {
+        // Ambil data promo berdasarkan ID
+        $promo = Promo::findOrFail($id);
+
+        // Kembalikan view show.blade.php dengan data promo
         return view('promo.show', compact('promo'));
     }
 
@@ -62,6 +76,7 @@ class PromoController extends Controller
         $validated = $request->validate([
             'nama_promo' => 'required|string|max:255',
             'deskripsi_promo' => 'required|string',
+            'jenis_promo' => 'required|string|max:255',
             'gambar_promo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'tanggal_promo' => 'required|date',
             'tanggal_berakhir' => 'nullable|date|after_or_equal:tanggal_promo',
@@ -76,6 +91,7 @@ class PromoController extends Controller
         // Update data promo
         $promo->update([
             'nama_promo' => $validated['nama_promo'],
+            'jenis_promo' => $validated['jenis_promo'],
             'deskripsi_promo' => $validated['deskripsi_promo'],
             'gambar_promo' => $promo->gambar_promo, // Tetap gunakan gambar lama jika tidak ada yang baru
             'tanggal_promo' => $validated['tanggal_promo'],
