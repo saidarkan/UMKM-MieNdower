@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ArtikelController extends Controller
@@ -13,6 +14,13 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+
+        if (Auth::check()) {
+            $artikel = Artikel::all();
+            return view('admin.artikel', compact('artikel'));
+        }
+
+        // Jika belum login, ambil semua menu dan arahkan ke view menu.index
         $artikel = Artikel::all();
         return view('artikel.index', compact('artikel'));
     }
@@ -23,6 +31,8 @@ class ArtikelController extends Controller
     public function create()
     {
         return view('artikel.create');
+
+
     }
 
     /**
@@ -34,7 +44,7 @@ class ArtikelController extends Controller
         'judul' => 'required|string|max:255',
         'kategori' => 'required|string|max:255',
         'status' => 'required|string|max:255',
-        'artikel' => 'required|string|max:255',
+        'artikel' => 'required|string',
         'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
     ],[
         'judul.required' => 'Judul harus diisi.',
@@ -67,10 +77,18 @@ class ArtikelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Artikel $artikel)
+    public function show($id)
     {
-        //
+        $artikel = Artikel::findOrFail($id); // Mendapatkan artikel berdasarkan ID
+        $rekomendasi = Artikel::where('id', '!=', $id) // Artikel lain selain artikel saat ini
+                            ->orderBy('created_at', 'desc') // Urutkan berdasarkan tanggal terbaru
+                            ->limit(5) // Batasi jumlah rekomendasi
+                            ->get();
+
+        return view('artikel.show', compact('artikel', 'rekomendasi')); // Kirimkan variabel ke view
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -92,12 +110,12 @@ class ArtikelController extends Controller
         'judul' => 'required|string|max:255',
         'kategori' => 'required|string|max:255',
         'status' => 'required|string|max:255',
-        'artikel' => 'required|string|max:255',
+        'artikel' => 'required|string',
         'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
         $artikel->tanggal = $request->tanggal;
-        $artikel->judul_= $request->judul;
+        $artikel->judul= $request->judul;
         $artikel->kategori = $request->kategori;
         $artikel->status = $request->status;
         $artikel->artikel = $request->artikel;

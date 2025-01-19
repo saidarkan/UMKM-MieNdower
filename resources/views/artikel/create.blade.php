@@ -22,11 +22,21 @@
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium">Kategori</label>
-                <input type="text" name="kategori" class="mt-1 block w-full border-gray-300 rounded-md" />
+                <select name="kategori" class="mt-1 block w-full border-gray-300 rounded-md">
+                    <option value="berita">Berita</option>
+                    <option value="pengumuman">Pengumuman</option>
+                </select>
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium">Status</label>
-                <input type="text" name="status" class="mt-1 block w-full border-gray-300 rounded-md" />
+                <div class="flex items-center">
+                    <label class="mr-4">
+                        <input type="radio" name="status" value="draft" class="mr-2" /> Draft
+                    </label>
+                    <label>
+                        <input type="radio" name="status" value="post" class="mr-2" /> Post
+                    </label>
+                </div>
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium">Artikel</label>

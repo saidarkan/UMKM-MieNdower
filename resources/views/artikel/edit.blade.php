@@ -26,7 +26,7 @@
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium">Gambar</label>
-                <input type="file" name="gambar_43" class="mt-1 block w-full" accept="image/*" />
+                <input type="file" name="gambar" class="mt-1 block w-full" accept="image/*" />
                 @if ($artikel->gambar)
                     <img src="{{ Storage::url($artikel->gambar) }}" class="h-48 mt-2" alt="Gambar Artikel" />
                 @endif
