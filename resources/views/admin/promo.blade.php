@@ -12,7 +12,13 @@
             <div class="grid grid-cols-2 gap-6">
                 @forelse ($promo as $item)
                     <div class="flex justify-center">
-                        <div class="flex flex-col items-center w-full rounded-lg shadow-lg overflow-hidden bg-white">
+                        <div class="flex flex-col items-center w-full rounded-lg shadow-lg overflow-hidden bg-white relative">
+                            <!-- Jenis Promo -->
+                            <span
+                                class="absolute top-2 left-2 bg-yellow-500 text-white text-sm font-bold py-1 px-2 rounded">
+                                {{ $item->jenis_promo }}
+                            </span>
+
                             <!-- Gambar Promo -->
                             <img src="{{ asset('storage/' . $item->gambar_promo) }}" alt="{{ $item->nama_promo }}"
                                 class="w-full h-[200px] object-cover bg-gray-200"
@@ -22,10 +28,9 @@
                                 <!-- Nama Promo -->
                                 <h3 class="text-2xl font-bold text-red-500 mb-2">{{ $item->nama_promo }}</h3>
                                 <!-- Deskripsi Promo -->
-                                <h5 class="text-sm font-bold text-gray-800 mb-2">{{ $item->deskripsi_promo }}</h5>
-
-
+                                <h5 class="text-sm font-bold text-gray-800 mb-2">{{Str::limit($item->deskripsi_promo,100 ) }}</h5>
                             </div>
+
                             <div class="mt-4 flex justify-between items-center space-x-4">
                                 <!-- Tombol Edit -->
                                 <a href="{{ route('promo.edit', $item->id) }}" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full py-2 px-4 transition duration-300 ease-in-out transform hover:scale-105">

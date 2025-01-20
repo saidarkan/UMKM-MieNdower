@@ -40,7 +40,7 @@
                                 onerror="this.onerror=null;this.src='{{ asset('images/placeholder.png') }}';">
                             <div class="flex-1 p-6 text-center">
                                 <h3 class="text-2xl font-bold text-red-500 mb-2">{{ $item->nama_promo }}</h3>
-                                <h5 class="text-sm font-bold text-gray-800 mb-2">{{ $item->deskripsi_promo }}</h5>
+                                <h5 class="text-sm font-bold text-gray-800 mb-2">{{ Str::limit($item->deskripsi_promo,100 )}}</h5>
                                 <a href="{{ route('promo.show', $item->id) }}"
                                     class="block mt-4 text-red-600 font-semibold underline hover:text-red-800">
                                     Klik untuk info selengkapnya
@@ -70,7 +70,7 @@
                                 onerror="this.onerror=null;this.src='{{ asset('images/placeholder.png') }}';">
                             <div class="flex-1 p-6 text-center">
                                 <h3 class="text-2xl font-bold text-red-500 mb-2">{{ $item->nama_promo }}</h3>
-                                <h5 class="text-sm font-bold text-gray-800 mb-2">{{ $item->deskripsi_promo }}</h5>
+                                <h5 class="text-sm font-bold text-gray-800 mb-2">{{ Str::limit($item->deskripsi_promo,100 )}}</h5>
                                 <a href="{{ route('promo.show', $item->id) }}"
                                     class="block mt-4 text-red-600 font-semibold underline hover:text-red-800">
                                     Klik untuk info selengkapnya
