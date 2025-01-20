@@ -14,9 +14,9 @@
                 <div class="mb-4">
                     <label for="jenis_menu" class="block text-sm font-medium text-gray-700">Jenis Menu</label>
                     <select name="jenis_menu" id="jenis_menu" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm" required>
-                        <option value="Mie" {{ old('jenis_menu') == 'Mie' ? 'selected' : '' }}>Mie</option>
-                        <option value="Bakso" {{ old('jenis_menu') == 'Bakso' ? 'selected' : '' }}>Bakso</option>
-                        <option value="Pangsit" {{ old('jenis_menu') == 'Pangsit' ? 'selected' : '' }}>Pangsit</option>
+                        <option value="mie" {{ old('jenis_menu') == 'mie' ? 'selected' : '' }}>Mie</option>
+                        <option value="bakso" {{ old('jenis_menu') == 'bakso' ? 'selected' : '' }}>Bakso</option>
+                        <option value="pangsit" {{ old('jenis_menu') == 'pangsit' ? 'selected' : '' }}>Pangsit</option>
                     </select>
                 </div>
 
