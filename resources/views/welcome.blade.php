@@ -98,7 +98,7 @@
                                         {{ $faq->pertanyaan }}
                                         <span class="toggle-icon text-red-500 text-xl">+</span>
                                     </div>
-                                    <div class="faq-answer hidden mt-2 text-gray-600" data-aos="slide-down" data-aos-delay="200">
+                                    <div class="faq-answer hidden text-left mt-2 text-gray-600" data-aos="slide-down" data-aos-delay="200">
                                         {{ $faq->jawaban }}
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                                 <img src="{{ asset('storage/' . $item->gambar_promo) }}"
                                     alt="{{ $item->nama_promo }}"
                                     class="w-full h-[200px] object-cover rounded-lg shadow-lg mb-4">
-                                <p class="text-gray-700">{{ Str::limit($item->deskripsi_promo, 100) }}</p>
+                                <p class="text-gray-700 text-left">{{ Str::limit($item->deskripsi_promo, 100) }}</p>
                                 <a href="{{ route('promo.show', $item->id) }}"
                                     class="mt-4 inline-block bg-red-700 text-white py-2 px-4 rounded-lg text-sm hover:bg-red-800 transition duration-300">Selengkapnya</a>
                             </div>
@@ -194,10 +194,10 @@
                                 <img src="{{ asset('storage/' . $menus->where('jenis_menu', 'mie')->first()->gambar_menu) }}" alt="Mie Special"
                                     class="w-full h-[300px] object-cover rounded-t-lg transition-all duration-500">
                                 <div class="p-6">
-                                    <h3 class="text-xl font-semibold text-red-600 mt-4">
+                                    <h3 class="text-xl font-semibold text-red-600 mt-4 text-left">
                                         {{ $menus->where('jenis_menu', 'mie')->first()->nama_menu }}
                                     </h3>
-                                    <p class="text-gray-600 mt-2">{{ $menus->where('jenis_menu', 'mie')->first()->deskripsi_menu }}</p>
+                                    <p class="text-gray-600 mt-2 text-left">{{ $menus->where('jenis_menu', 'mie')->first()->deskripsi_menu }}</p>
                                 </div>
                             </div>
                         </a>
@@ -208,10 +208,10 @@
                                 <img src="{{ asset('storage/' . $menus->where('jenis_menu', 'pangsit')->first()->gambar_menu) }}" alt="Pangsit"
                                     class="w-full h-[300px] object-cover rounded-t-lg transition-all duration-500">
                                 <div class="p-6">
-                                    <h3 class="text-xl font-semibold text-red-600 mt-4">
+                                    <h3 class="text-xl font-semibold text-red-600 mt-4 text-left">
                                         {{ $menus->where('jenis_menu', 'pangsit')->first()->nama_menu }}
                                     </h3>
-                                    <p class="text-gray-600 mt-2">{{ $menus->where('jenis_menu', 'pangsit')->first()->deskripsi_menu }}</p>
+                                    <p class="text-gray-600 mt-2 text-left">{{ $menus->where('jenis_menu', 'pangsit')->first()->deskripsi_menu }}</p>
                                 </div>
                             </div>
                         </a>
@@ -222,10 +222,10 @@
                                 <img src="{{ asset('storage/' . $menus->where('jenis_menu', 'bakso')->first()->gambar_menu) }}" alt="Bakso"
                                     class="w-full h-[300px] object-cover rounded-t-lg transition-all duration-500">
                                 <div class="p-6">
-                                    <h3 class="text-xl font-semibold text-red-600 mt-4">
+                                    <h3 class="text-xl font-semibold text-red-600 mt-4 text-left">
                                         {{ $menus->where('jenis_menu', 'bakso')->first()->nama_menu }}
                                     </h3>
-                                    <p class="text-gray-600 mt-2">{{ $menus->where('jenis_menu', 'bakso')->first()->deskripsi_menu }}</p>
+                                    <p class="text-gray-600 mt-2 text-left">{{ $menus->where('jenis_menu', 'bakso')->first()->deskripsi_menu }}</p>
                                 </div>
                             </div>
                         </a>
