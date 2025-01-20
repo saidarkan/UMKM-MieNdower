@@ -24,12 +24,17 @@ class AboutController extends Controller
         $request->validate([
             'judul' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi file gambar
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+
+        if (About::exists()) {
+            return redirect()->route('about.index')->with('error', 'Data sudah ada, Anda tidak dapat menambahkan lagi.');
+        }
 
         $data = $request->all();
 
-        // Proses upload gambar jika ada
+        
         if ($request->hasFile('gambar')) {
             $data['gambar'] = $request->file('gambar')->store('about_images', 'public');
         }
@@ -38,6 +43,8 @@ class AboutController extends Controller
 
         return redirect()->route('about.index')->with('success', 'Data berhasil ditambahkan');
     }
+
+
 
     public function show(About $about)
     {
