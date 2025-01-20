@@ -9,6 +9,19 @@
             <i class="fas fa-plus-circle"></i> Tambah Menu
             </a>
 
+            @if (session('error'))
+    <div class="bg-red-500 text-white p-4 rounded-lg mb-4">
+        {{ session('error') }}
+    </div>
+@endif
+
+@if (session('success'))
+    <div class="bg-green-500 text-white p-4 rounded-lg mb-4">
+        {{ session('success') }}
+    </div>
+@endif
+
+
             <!-- Tabel Daftar About -->
             <div class="overflow-x-auto">
                 <table class="min-w-full table-auto">
